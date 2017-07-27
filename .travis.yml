@@ -1,0 +1,6 @@
+language: go
+script: go get github.com/astaxie/beego && go install  github.com/astaxie/beego && go test
+
+go:
+  - 1.8
+  - master
