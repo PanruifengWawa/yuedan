@@ -1,0 +1,58 @@
+2017/07/27 21:12:26 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/27 21:12:49 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/27 21:12:55 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    351.869µs|   match|[44m GET     [0m /swagger/
+2017/07/27 21:12:55 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    566.508µs|   match|[44m GET     [0m /swagger/swagger-ui.css
+2017/07/27 21:12:55 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   6.031041ms|   match|[44m GET     [0m /swagger/swagger-ui-standalone-preset.js
+2017/07/27 21:12:55 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|  11.452044ms|   match|[44m GET     [0m /swagger/swagger-ui-bundle.js
+2017/07/27 21:12:56 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.017163ms|   match|[44m GET     [0m /swagger/swagger.json
+2017/07/27 21:12:56 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   1.904575ms|   match|[44m GET     [0m /swagger/favicon-32x32.png
+2017/07/27 21:12:56 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   1.893271ms|   match|[44m GET     [0m /swagger/favicon-16x16.png
+2017/07/27 21:13:05 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.205242ms|   match|[44m GET     [0m /     r:/
+2017/07/27 21:20:49 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/27 21:20:53 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|    189.818µs|   match|[44m GET     [0m /swagger/
+2017/07/27 21:20:55 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.951199ms|   match|[44m GET     [0m /     r:/
+2017/07/27 21:20:59 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|     58.885µs| nomatch|[44m GET     [0m /rr
+2017/07/27 21:21:01 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.111335ms|   match|[44m GET     [0m /     r:/
+2017/07/27 21:21:04 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   1.872768ms|   match|[44m GET     [0m //    r:/
+2017/07/27 21:21:06 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.052496ms|   match|[44m GET     [0m /     r:/
+2017/07/27 21:21:09 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|     51.426µs| nomatch|[44m GET     [0m /sss
+2017/07/27 21:21:16 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|     44.256µs| nomatch|[44m GET     [0m /sss
+2017/07/27 21:22:34 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/27 21:22:35 [D] [server.go:2568] |      127.0.0.1|[47m 302 [0m|      109.8µs| nomatch|[44m GET     [0m /sss
+2017/07/27 21:22:35 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.881041ms|   match|[44m GET     [0m /     r:/
+2017/07/27 21:22:38 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.064054ms|   match|[44m GET     [0m /swagger/swagger-ui.css.map
+2017/07/27 21:22:39 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   1.928273ms|   match|[44m GET     [0m /swagger/swagger-ui-bundle.js.map
+2017/07/27 21:22:39 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   1.053775ms|   match|[44m GET     [0m /swagger/swagger-ui-standalone-preset.js.map
+2017/07/27 21:22:42 [D] [server.go:2568] |      127.0.0.1|[47m 302 [0m|     50.426µs| nomatch|[44m GET     [0m /aaa
+2017/07/27 21:22:42 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.342056ms|   match|[44m GET     [0m /     r:/
+2017/07/27 21:23:08 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.285198ms|   match|[44m GET     [0m /     r:/
+2017/07/27 21:23:11 [D] [server.go:2568] |      127.0.0.1|[47m 302 [0m|     46.315µs| nomatch|[44m GET     [0m /home
+2017/07/27 21:23:11 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.444962ms|   match|[44m GET     [0m /     r:/
+2017/07/27 21:23:47 [D] [server.go:2568] |      127.0.0.1|[47m 302 [0m|     43.032µs| nomatch|[44m GET     [0m /fff
+2017/07/27 21:23:47 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.521092ms|   match|[44m GET     [0m /     r:/
+2017/07/27 21:24:21 [D] [server.go:2568] |      127.0.0.1|[47m 302 [0m|     50.068µs| nomatch|[44m GET     [0m /v1
+2017/07/27 21:24:21 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   1.951274ms|   match|[44m GET     [0m /     r:/
+2017/07/27 21:24:25 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    133.619µs|   match|[44m GET     [0m /v1/user   r:/v1/user/
+2017/07/27 21:27:12 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/27 21:27:15 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|    168.622µs|   match|[44m GET     [0m /swagger/
+2017/07/27 21:27:30 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/27 21:27:37 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|    197.175µs|   match|[44m GET     [0m /swagger/
+2017/07/27 21:28:08 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    175.297µs|   match|[44m GET     [0m /swagger/
+2017/07/27 21:28:08 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    325.751µs|   match|[44m GET     [0m /swagger/swagger-ui.css
+2017/07/27 21:28:08 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   1.309575ms|   match|[44m GET     [0m /swagger/swagger-ui-standalone-preset.js
+2017/07/27 21:28:08 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   8.043383ms|   match|[44m GET     [0m /swagger/swagger-ui-bundle.js
+2017/07/27 21:28:08 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    269.841µs|   match|[44m GET     [0m /swagger/swagger.json
+2017/07/27 21:28:09 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|      89.79µs|   match|[44m GET     [0m /swagger/favicon-32x32.png
+2017/07/27 21:28:09 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    166.694µs|   match|[44m GET     [0m /swagger/favicon-16x16.png
+2017/07/27 21:29:12 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/27 21:29:15 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|    241.721µs|   match|[44m GET     [0m /swagger/
+2017/07/27 21:29:15 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|    131.221µs|   match|[44m GET     [0m /swagger/swagger.json
+2017/07/27 21:54:22 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/27 21:55:15 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/27 22:00:51 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/27 22:00:57 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|    218.129µs|   match|[44m GET     [0m /swagger/
+2017/07/27 22:00:57 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|    149.426µs|   match|[44m GET     [0m /swagger/swagger-ui.css
+2017/07/27 22:00:57 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|   3.712227ms|   match|[44m GET     [0m /swagger/swagger-ui-bundle.js
+2017/07/27 22:00:57 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|   4.059796ms|   match|[44m GET     [0m /swagger/swagger-ui-standalone-preset.js
+2017/07/27 22:00:57 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    195.971µs|   match|[44m GET     [0m /swagger/swagger.json
+2017/07/27 22:05:35 [I] [asm_amd64.s:2197] http server Running on http://:8080

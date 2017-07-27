@@ -15,21 +15,11 @@ import (
 
 func init() {
 	beego.Router("/", &controllers.HomeController{})
-
-	views := beego.NewNamespace("/test",
-
-		beego.NSRouter("", &controllers.HomeController{}),
-	)
-	beego.AddNamespace(views)
 	ns := beego.NewNamespace("/v1",
-		beego.NSNamespace("/object",
+
+		beego.NSNamespace("/t_user",
 			beego.NSInclude(
-				&controllers.ObjectController{},
-			),
-		),
-		beego.NSNamespace("/user",
-			beego.NSInclude(
-				&controllers.UserController{},
+				&controllers.TUserController{},
 			),
 		),
 	)

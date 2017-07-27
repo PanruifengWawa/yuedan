@@ -7,7 +7,7 @@ import (
 
 func init() {
 
-	beego.GlobalControllerRouter["yuedan/controllers:ObjectController"] = append(beego.GlobalControllerRouter["yuedan/controllers:ObjectController"],
+	beego.GlobalControllerRouter["yuedan/controllers:TUserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:TUserController"],
 		beego.ControllerComments{
 			Method: "Post",
 			Router: `/`,
@@ -15,7 +15,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["yuedan/controllers:ObjectController"] = append(beego.GlobalControllerRouter["yuedan/controllers:ObjectController"],
+	beego.GlobalControllerRouter["yuedan/controllers:TUserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:TUserController"],
 		beego.ControllerComments{
 			Method: "GetAll",
 			Router: `/`,
@@ -23,83 +23,27 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["yuedan/controllers:ObjectController"] = append(beego.GlobalControllerRouter["yuedan/controllers:ObjectController"],
+	beego.GlobalControllerRouter["yuedan/controllers:TUserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:TUserController"],
 		beego.ControllerComments{
-			Method: "Get",
-			Router: `/:objectId`,
+			Method: "GetOne",
+			Router: `/:id`,
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["yuedan/controllers:ObjectController"] = append(beego.GlobalControllerRouter["yuedan/controllers:ObjectController"],
+	beego.GlobalControllerRouter["yuedan/controllers:TUserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:TUserController"],
 		beego.ControllerComments{
 			Method: "Put",
-			Router: `/:objectId`,
+			Router: `/:id`,
 			AllowHTTPMethods: []string{"put"},
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["yuedan/controllers:ObjectController"] = append(beego.GlobalControllerRouter["yuedan/controllers:ObjectController"],
+	beego.GlobalControllerRouter["yuedan/controllers:TUserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:TUserController"],
 		beego.ControllerComments{
 			Method: "Delete",
-			Router: `/:objectId`,
+			Router: `/:id`,
 			AllowHTTPMethods: []string{"delete"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["yuedan/controllers:UserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:UserController"],
-		beego.ControllerComments{
-			Method: "Post",
-			Router: `/`,
-			AllowHTTPMethods: []string{"post"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["yuedan/controllers:UserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:UserController"],
-		beego.ControllerComments{
-			Method: "GetAll",
-			Router: `/`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["yuedan/controllers:UserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:UserController"],
-		beego.ControllerComments{
-			Method: "Get",
-			Router: `/:uid`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["yuedan/controllers:UserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:UserController"],
-		beego.ControllerComments{
-			Method: "Put",
-			Router: `/:uid`,
-			AllowHTTPMethods: []string{"put"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["yuedan/controllers:UserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:UserController"],
-		beego.ControllerComments{
-			Method: "Delete",
-			Router: `/:uid`,
-			AllowHTTPMethods: []string{"delete"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["yuedan/controllers:UserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:UserController"],
-		beego.ControllerComments{
-			Method: "Login",
-			Router: `/login`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["yuedan/controllers:UserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:UserController"],
-		beego.ControllerComments{
-			Method: "Logout",
-			Router: `/logout`,
-			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 
