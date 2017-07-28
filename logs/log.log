@@ -58,3 +58,27 @@
 2017/07/27 22:05:35 [I] [asm_amd64.s:2197] http server Running on http://:8080
 2017/07/27 22:11:12 [I] [asm_amd64.s:2197] http server Running on http://:8080
 2017/07/27 22:11:15 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    269.598µs|   match|[44m GET     [0m /swagger/swagger.json
+2017/07/28 13:49:09 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/28 13:49:15 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|   1.991009ms|   match|[44m GET     [0m /swagger/
+2017/07/28 13:49:15 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|    280.497µs|   match|[44m GET     [0m /swagger/swagger-ui.css
+2017/07/28 13:49:15 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|   3.540677ms|   match|[44m GET     [0m /swagger/swagger-ui-bundle.js
+2017/07/28 13:49:15 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|   4.574148ms|   match|[44m GET     [0m /swagger/swagger-ui-standalone-preset.js
+2017/07/28 13:49:15 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|    102.096µs|   match|[44m GET     [0m /swagger/swagger.json
+2017/07/28 13:49:28 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   1.844332ms|   match|[44m GET     [0m /     r:/
+2017/07/28 13:49:42 [D] [server.go:2568] |      127.0.0.1|[47m 302 [0m|     42.062µs| nomatch|[44m GET     [0m /sssss
+2017/07/28 13:49:42 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   1.857906ms|   match|[44m GET     [0m /     r:/
+2017/07/28 14:04:01 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/28 14:04:03 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.520419ms|   match|[44m GET     [0m /v1/t_user/   r:/v1/t_user/
+2017/07/28 14:04:05 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.746838ms|   match|[44m GET     [0m /v1/t_user/   r:/v1/t_user/
+2017/07/28 14:04:06 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|    130.694µs|   match|[44m GET     [0m /swagger/
+2017/07/28 14:04:11 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|      2.622ms|   match|[44m GET     [0m /v1/t_user/   r:/v1/t_user/
+2017/07/28 14:04:24 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   1.698593ms|   match|[44m GET     [0m /v1/t_user/   r:/v1/t_user/
+2017/07/28 14:05:14 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.992873ms|   match|[44m GET     [0m /v1/t_user/   r:/v1/t_user/
+2017/07/28 14:05:28 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.106163ms|   match|[44m GET     [0m /v1/t_user/   r:/v1/t_user/
+2017/07/28 14:05:46 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|     50.146µs|   match|[44m GET     [0m /v1/t_user/   r:/v1/t_user/
+2017/07/28 14:05:58 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   5.488598ms|   match|[44m GET     [0m /v1/t_user/   r:/v1/t_user/
+2017/07/28 14:06:14 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|      51.41µs|   match|[44m GET     [0m /v1/t_user/   r:/v1/t_user/
+2017/07/28 14:06:32 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|      55.57µs|   match|[44m GET     [0m /v1/t_user/   r:/v1/t_user/
+2017/07/28 14:07:15 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.840162ms|   match|[44m GET     [0m /v1/t_user/   r:/v1/t_user/
+2017/07/28 14:07:33 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.402146ms|   match|[44m GET     [0m /v1/t_user/   r:/v1/t_user/
+2017/07/28 14:07:38 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   3.527216ms|   match|[44m GET     [0m /v1/t_user/   r:/v1/t_user/
