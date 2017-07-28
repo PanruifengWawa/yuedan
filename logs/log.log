@@ -56,3 +56,5 @@
 2017/07/27 22:00:57 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|   4.059796ms|   match|[44m GET     [0m /swagger/swagger-ui-standalone-preset.js
 2017/07/27 22:00:57 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    195.971µs|   match|[44m GET     [0m /swagger/swagger.json
 2017/07/27 22:05:35 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/27 22:11:12 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/27 22:11:15 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    269.598µs|   match|[44m GET     [0m /swagger/swagger.json
