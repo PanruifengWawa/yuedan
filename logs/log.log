@@ -58,3 +58,6 @@
 2017/07/27 22:05:35 [I] [asm_amd64.s:2197] http server Running on http://:8080
 2017/07/27 22:11:12 [I] [asm_amd64.s:2197] http server Running on http://:8080
 2017/07/27 22:11:15 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    269.598µs|   match|[44m GET     [0m /swagger/swagger.json
+2017/07/28 15:48:22 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/28 15:48:35 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/28 15:52:22 [I] [asm_amd64.s:2197] http server Running on http://:8080
