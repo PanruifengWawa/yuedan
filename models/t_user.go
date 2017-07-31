@@ -10,9 +10,9 @@ import (
 )
 
 type TUser struct {
-	Id       int    `orm:"column(id);auto"`
-	UserName string `orm:"column(user_name);size(16)"`
-	Password string `orm:"column(password);size(64)"`
+	Id       int    `orm:"column(id);auto" form:"-"`
+	UserName string `orm:"column(user_name);size(16)" form:"UserName"`
+	Password string `orm:"column(password);size(64)" form:"Password"`
 }
 
 func (t *TUser) TableName() string {

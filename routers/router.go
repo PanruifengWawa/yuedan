@@ -6,11 +6,13 @@ package routers
 
 import (
 	"yuedan/controllers"
+	"yuedan/filters"
 
 	"github.com/astaxie/beego"
 )
 
 func init() {
+
 	beego.Router("/", &controllers.HomeController{})
 	ns := beego.NewNamespace("/v1",
 
@@ -19,6 +21,13 @@ func init() {
 				&controllers.TUserController{},
 			),
 		),
+
+		beego.NSNamespace("/t_token",
+			beego.NSInclude(
+				&controllers.TTokenController{},
+			),
+		),
 	)
+	beego.InsertFilter("/v1/*", beego.BeforeExec, filters.UserFilter)
 	beego.AddNamespace(ns)
 }

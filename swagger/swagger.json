@@ -5,11 +5,179 @@
         "description": "Document of APIs",
         "version": "1.0.0",
         "contact": {
-            "email": "http://www.panruifeng.com"
+            "email": "46937922@qq.com"
         }
     },
     "basePath": "/v1",
     "paths": {
+        "/t_token/": {
+            "get": {
+                "tags": [
+                    "t_token"
+                ],
+                "description": "get TToken",
+                "operationId": "TTokenController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.TToken"
+                        }
+                    },
+                    "403": {}
+                }
+            },
+            "post": {
+                "tags": [
+                    "t_token"
+                ],
+                "description": "create TToken",
+                "operationId": "TTokenController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TToken content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TToken"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.TToken"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/t_token/{id}": {
+            "get": {
+                "tags": [
+                    "t_token"
+                ],
+                "description": "get TToken by id",
+                "operationId": "TTokenController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.TToken"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "t_token"
+                ],
+                "description": "update the TToken",
+                "operationId": "TTokenController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TToken content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TToken"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "schema": {
+                            "$ref": "#/definitions/models.TToken"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "t_token"
+                ],
+                "description": "delete the TToken",
+                "operationId": "TTokenController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
         "/t_user/": {
             "get": {
                 "tags": [
@@ -180,6 +348,26 @@
         }
     },
     "definitions": {
+        "models.TToken": {
+            "title": "TToken",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "LoginDate": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "TokenStr": {
+                    "type": "string"
+                },
+                "UserId": {
+                    "$ref": "#/definitions/models.TUser"
+                }
+            }
+        },
         "models.TUser": {
             "title": "TUser",
             "type": "object",
@@ -201,6 +389,10 @@
         {
             "name": "t_user",
             "description": "TUserController operations for TUser\n"
+        },
+        {
+            "name": "t_token",
+            "description": "TTokenController operations for TToken\n"
         }
     ]
 }
