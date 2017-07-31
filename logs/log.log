@@ -1810,3 +1810,69 @@ created by net/http.(*Server).Serve
 2017/07/31 20:43:01 [C] [asm_amd64.s:514] /usr/local/go/src/net/http/server.go:2568
 2017/07/31 20:43:01 [C] [asm_amd64.s:514] /usr/local/go/src/net/http/server.go:1825
 2017/07/31 20:43:01 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/asm_amd64.s:2197
+2017/07/31 20:44:57 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/31 20:44:59 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    1.06119ms|   match|[44m GET     [0m /     r:/
+2017/07/31 20:44:59 [C] [asm_amd64.s:514] the request url is  /v1/t_user
+2017/07/31 20:44:59 [C] [asm_amd64.s:514] Handler crashed with error '_xsrf' argument missing from POST
+2017/07/31 20:44:59 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/asm_amd64.s:514
+2017/07/31 20:44:59 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/panic.go:489
+2017/07/31 20:44:59 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/context/context.go:80
+2017/07/31 20:44:59 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/context/context.go:164
+2017/07/31 20:44:59 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/controller.go:649
+2017/07/31 20:44:59 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/router.go:788
+2017/07/31 20:44:59 [C] [asm_amd64.s:514] /usr/local/go/src/net/http/server.go:2568
+2017/07/31 20:44:59 [C] [asm_amd64.s:514] /usr/local/go/src/net/http/server.go:1825
+2017/07/31 20:44:59 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/asm_amd64.s:2197
+2017/07/31 20:45:04 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|     75.229µs|   match|[44m GET     [0m /v1/t_user   r:/v1/t_user/
+2017/07/31 20:45:04 [D] [server.go:2568] |      127.0.0.1|[47m 302 [0m|     81.178µs| nomatch|[44m GET     [0m /favicon.ico
+2017/07/31 20:45:04 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    768.317µs|   match|[44m GET     [0m /     r:/
+2017/07/31 20:45:08 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    888.031µs|   match|[44m GET     [0m /     r:/
+2017/07/31 20:45:09 [C] [asm_amd64.s:514] the request url is  /v1/t_user
+2017/07/31 20:45:09 [C] [asm_amd64.s:514] Handler crashed with error '_xsrf' argument missing from POST
+2017/07/31 20:45:09 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/asm_amd64.s:514
+2017/07/31 20:45:09 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/panic.go:489
+2017/07/31 20:45:09 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/context/context.go:80
+2017/07/31 20:45:09 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/context/context.go:164
+2017/07/31 20:45:09 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/controller.go:649
+2017/07/31 20:45:09 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/router.go:788
+2017/07/31 20:45:09 [C] [asm_amd64.s:514] /usr/local/go/src/net/http/server.go:2568
+2017/07/31 20:45:09 [C] [asm_amd64.s:514] /usr/local/go/src/net/http/server.go:1825
+2017/07/31 20:45:09 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/asm_amd64.s:2197
+2017/07/31 20:48:20 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/07/31 20:48:23 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   1.786507ms|   match|[44m GET     [0m /     r:/
+2017/07/31 20:48:23 [C] [asm_amd64.s:514] the request url is  /v1/t_user
+2017/07/31 20:48:23 [C] [asm_amd64.s:514] Handler crashed with error '_xsrf' argument missing from POST
+2017/07/31 20:48:23 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/asm_amd64.s:514
+2017/07/31 20:48:23 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/panic.go:489
+2017/07/31 20:48:23 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/context/context.go:80
+2017/07/31 20:48:23 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/context/context.go:164
+2017/07/31 20:48:23 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/controller.go:649
+2017/07/31 20:48:23 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/router.go:788
+2017/07/31 20:48:23 [C] [asm_amd64.s:514] /usr/local/go/src/net/http/server.go:2568
+2017/07/31 20:48:23 [C] [asm_amd64.s:514] /usr/local/go/src/net/http/server.go:1825
+2017/07/31 20:48:23 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/asm_amd64.s:2197
+2017/07/31 20:48:29 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    700.537µs|   match|[44m GET     [0m /home   r:/home
+2017/07/31 20:48:29 [C] [asm_amd64.s:514] the request url is  /v1/t_user
+2017/07/31 20:48:29 [C] [asm_amd64.s:514] Handler crashed with error '_xsrf' argument missing from POST
+2017/07/31 20:48:29 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/asm_amd64.s:514
+2017/07/31 20:48:29 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/panic.go:489
+2017/07/31 20:48:29 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/context/context.go:80
+2017/07/31 20:48:29 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/context/context.go:164
+2017/07/31 20:48:29 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/controller.go:649
+2017/07/31 20:48:29 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/router.go:788
+2017/07/31 20:48:29 [C] [asm_amd64.s:514] /usr/local/go/src/net/http/server.go:2568
+2017/07/31 20:48:29 [C] [asm_amd64.s:514] /usr/local/go/src/net/http/server.go:1825
+2017/07/31 20:48:29 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/asm_amd64.s:2197
+2017/07/31 20:48:32 [D] [server.go:2568] |      127.0.0.1|[47m 302 [0m|         51µs| nomatch|[44m GET     [0m /home/aa
+2017/07/31 20:48:32 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|        735µs|   match|[44m GET     [0m /     r:/
+2017/07/31 20:48:32 [C] [asm_amd64.s:514] the request url is  /v1/t_user
+2017/07/31 20:48:32 [C] [asm_amd64.s:514] Handler crashed with error '_xsrf' argument missing from POST
+2017/07/31 20:48:32 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/asm_amd64.s:514
+2017/07/31 20:48:32 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/panic.go:489
+2017/07/31 20:48:32 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/context/context.go:80
+2017/07/31 20:48:32 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/context/context.go:164
+2017/07/31 20:48:32 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/controller.go:649
+2017/07/31 20:48:32 [C] [asm_amd64.s:514] /Users/dapan/Documents/go/src/github.com/astaxie/beego/router.go:788
+2017/07/31 20:48:32 [C] [asm_amd64.s:514] /usr/local/go/src/net/http/server.go:2568
+2017/07/31 20:48:32 [C] [asm_amd64.s:514] /usr/local/go/src/net/http/server.go:1825
+2017/07/31 20:48:32 [C] [asm_amd64.s:514] /usr/local/go/src/runtime/asm_amd64.s:2197

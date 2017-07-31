@@ -13,7 +13,8 @@ import (
 
 func init() {
 
-	beego.Router("/", &controllers.HomeController{})
+	beego.Router("/", &controllers.HomeController{}, "get:RootView")
+	beego.Router("/home", &controllers.HomeController{}, "get:HomeView")
 	ns := beego.NewNamespace("/v1",
 
 		beego.NSNamespace("/t_user",

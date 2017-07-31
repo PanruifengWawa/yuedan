@@ -93,7 +93,6 @@
   <div class="backdrop"></div>
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
- <script src="resource/js/jquery.cookie.js"></script>
 <script>
 jQuery.postJSON = function(url, args, callback) {
     //var _xsrf = $('meta[name=_xsrf]').attr('content');
