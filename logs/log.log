@@ -1,5 +1,3 @@
-2017/07/28 16:03:30 [I] [asm_amd64.s:2197] http server Running on http://:8080
-2017/07/28 16:03:37 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.306804ms|   match|[44m GET     [0m /     r:/
-2017/07/28 16:03:37 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|    162.554µs|   match|[44m GET     [0m /resource/js/a.js
-2017/07/28 16:03:43 [D] [server.go:2568] |      127.0.0.1|[42m 200 [0m|   2.452682ms|   match|[44m GET     [0m /     r:/
-2017/07/28 16:03:43 [D] [server.go:2568] |      127.0.0.1|[47m 304 [0m|     44.937µs|   match|[44m GET     [0m /resource/js/a.js
+2017/09/26 16:01:22 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/09/26 16:01:22 [C] [asm_amd64.s:2197] ListenAndServe:  listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+2017/09/26 16:01:52 [I] [asm_amd64.s:2197] http server Running on http://:8080
