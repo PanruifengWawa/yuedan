@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <title>约单网--注册账户</title>
+    <link rel="icon" href="resource/images/icon.ico" type="image/x-icon"/>
+    <!-- <link rel="stylesheet" type="text/css" href="resource/css/theajack.less"/> -->
+    <!-- <link rel="stylesheet" type="text/less" href="resource/css/common.less"/> -->
+    <!-- <link rel="stylesheet" type="text/less" href="resource/css/index.less"/> -->
+    
+    <link rel="stylesheet" type="text/css" href="resource/css/theajack.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/icon.css"/>
+    <head>
+<body>
+    <div id="centerWrapper">
+        <img src="resource/images/yuedan_l.png" alt="" class="big-logo">
+        <div class="info-text">忘记密码</div>
+        <div j-form="pwd">
+          <div class="input-w">
+            <i class="icon icon-mobile"></i>
+            <input type="number" class="input big has-icon" j-valid="phone" placeholder="请输入手机号">
+          </div>
+          <div class="input-w">
+            <i class="icon icon-check-sign"></i>
+            <div class="send-code bg-boy">发送验证码</div>
+            <input type="number" class="input big has-icon" j-valid="numberCode[6]" placeholder="请输入验证码">
+            <span class="valid valid-btn v-fix">*6位数字</span>
+          </div>
+          <div class="input-w">
+            <i class="icon icon-lock"></i>
+            <i class="icon tail icon-eye-open" onclick="toggleViewPw(this)"></i>
+            <input type="password" class="input big has-icon" j-valid="notnull" placeholder="请输新密码" >
+          </div>
+          <div class="input-w">
+            <i class="icon icon-lock"></i>
+            <i class="icon tail icon-eye-open" onclick="toggleViewPw(this)"></i>
+            <input type="password" class="input big has-icon" j-valid="notnull" placeholder="请再次输入" >
+          </div>
+        </div>
+        <div class="login-func-w regist">
+            <div class="btn" onclick="reset()">重置密码</div>
+        </div>
+    </div>
+    <div class="copyright">© 2017 Yuedanwang All Right Reserved</div>
+    <!-- <script type="text/javascript" src="resource/js/less.min.js"></script> -->
+    <script type="text/javascript" src="resource/js/jetter2.0.js"></script>
+    <script type="text/javascript" src="resource/js/common.js"></script>
+    <script type="text/javascript" src="resource/js/bg.js"></script>
+    <script type="text/javascript">
+        J.ready(function(){
+          checkMiddle(30);
+        });
+        function reset() {
+          J.jump("index");
+        }
+    </script>
+</body>
+
+</html>

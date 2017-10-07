@@ -1,3 +1,7 @@
-2017/09/26 16:01:22 [I] [asm_amd64.s:2197] http server Running on http://:8080
-2017/09/26 16:01:22 [C] [asm_amd64.s:2197] ListenAndServe:  listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
-2017/09/26 16:01:52 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/10/07 18:20:15 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/10/07 18:20:17 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/10/07 18:21:04 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/10/07 18:21:40 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/10/07 18:23:34 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/10/07 18:25:00 [I] [asm_amd64.s:2197] http server Running on http://:8080
+2017/10/07 18:26:05 [I] [asm_amd64.s:2197] http server Running on http://:8080

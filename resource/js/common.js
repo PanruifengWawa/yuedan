@@ -14,8 +14,10 @@ function getUserName(){
   return getCookie("adminName");
 }
 J.ready(function(){
-  J.noteStyle("simple");
+  J.noteStyle("center");
   J.lang("chinese");
+  initValid();
+  
 });
 function checkMiddle(offset) {
     J.id("centerWrapper").exist(function(obj){
@@ -55,7 +57,7 @@ function stopb(e){
 }
       
 
-var def_img="resource/img/def_cover.png";
+var def_img="resource/images/def_cover.png";
 function postData(data,url,callback,isNeedToken,e_call) {
   var formData = new FormData();
   for(var k in data) {
@@ -159,7 +161,7 @@ function logout(){
   J.confirm("是否确认退出登录？",function(){
     setCookie("token","");
     J.show("退出登录成功。")
-    delay('J.jump("index.html")');
+    delay('J.jump("index")');
   })
 }
 function delay(call,time){
@@ -305,10 +307,10 @@ function undisable(obj){
   }
 }
 function fixBody(){
-  J.body().addClass("fix");
+  J.body().addClass("overflow-hide");
 }
 function freeBody(){
-  J.body().removeClass("fix");
+  J.body().removeClass("overflow-hide");
 }
 window.onbeforeunload=stopRefresh;//关闭前的事件 
 
@@ -319,71 +321,112 @@ function toggleViewPw(obj) {
   var input=obj.next();
   if(input.attr("type")=="text"){
       input.attr("type","password");
-      obj.attr("src","resource/img/icon/pw_show_b.png");
+      obj.replaceClass("icon-eye-close","icon-eye-open");
   }else{
       input.attr("type","text");
-      obj.attr("src","resource/img/icon/pw_hide_b.png");
+      obj.replaceClass("icon-eye-open","icon-eye-close");
   }
 }
-function initValid() {
-    J.attr("jet-valid").exist(function(inputs){
-        inputs.clk(function(){
-            stopb(event);
-            this.removeClass("unpass").next().removeClass("unpass");
-        })
-        J.banDefault();
-        J.banValidShow();
-        J.onOneFail(function(input,err){
-            input.addClass("unpass").next().addClass("unpass").txt(err);
-        });
-    })
-}
-
-var theme="boy",theme_rep=(theme=="boy")?"_b.":"_g.";
-function setTheme() {
-  var color=((theme=="boy")?"#57baff":"#fb84b0")+"!important";
-  var style=".theme{background-color:"+color+"}.theme-text{color:"+color+"}.theme-border{border:1px solid "+color+"}";
-  J.tag("head").append(J.ct("style").txt(style));
-  
-  J.cls("theme-img").each(function (item) {
-    setThemeImg(item);
+function initValid(obj) {
+  var list;
+  if(obj!=undefined){
+    list=obj.findAttr("j-valid");
+  }else{
+    list=J.attr("j-valid");
+  }
+  list.exist(function(inputs){
+    inputs.each(function(input){
+      initOneValid(input);
+    });
+    J.banDefault();
+    J.banValidShow();
+    J.onOneFail(function(input,err){
+      var v=input.addClass("unpass").next().addClass("unpass");
+      if(!v.hasClass("v-fix")){
+        v.txt(err);
+      }
+    });
+    J.onOnePass(function(input){
+      input.removeClass("unpass").next().removeClass("unpass");
+    });
   });
 }
-function setThemeImg(item) {
-    item.attr("src",item.attr("src").replace("_w.",theme_rep));
+function initOneValid(input){
+  input.clk(function(){
+    stopb(event);
+    this.removeClass("unpass").next().removeClass("unpass");
+  });
+  var v=input.next();
+  if(v==undefined||!v.hasClass("valid")){
+    var prev=input.prev();
+    if(prev.hasClass("tail")){
+      v=J.ct("span.valid.valid-tail");
+    }else if(prev.hasClass("send-code")){
+      v=J.ct("span.valid.valid-btn");
+    }else{
+      v=J.ct("span.valid");
+    }
+    input.after(v);
+  }
+  v.clk(validClick);
 }
-function resetThemeImg(item) {
-    item.attr("src",item.attr("src").replace(theme_rep,"_w."));
+function validClick(){
+  this.prev().click();
+  this.prev().focus();
 }
-function changeType(obj){
-    active(obj,"theme",function (item) {
-        setThemeImg(item.child(0));
-    });
-    resetThemeImg(obj.child(0));
+// #1795f9 #57baff
+// #EE5857 #EE5857
+var theme="girl",theme_rep=(theme=="boy")?"_b.":"_g.";
+function setTheme(t_type) {
+  if(t_type==undefined){
+    t_type=theme;
+  }
+  var color=((t_type=="boy")?"#1795f9":"#EE5857")+"!important";
+  var l_color=((t_type=="boy")?"#ebfaff":"#ffe9f4")+"!important";
+  var style=".theme{background-color:"+color+"}\
+             .theme-text{color:"+color+"}\
+             .theme-border{border:1px solid "+color+"}\
+             .theme-bb{border-bottom:1px solid "+color+"}\
+             .theme-br{border-right:1px solid "+color+"}\
+             .theme-bt{border-top:1px solid "+color+"}\
+             .theme-bl{border-left:1px solid "+color+"}\
+             .theme-bg-active:active{background-color:"+l_color+"}";
+  J.tag("head").append(J.ct("style").txt(style));
+  
+  // J.cls("theme-img").each(function (item) {
+    // setThemeImg(item);
+  // });
 }
+// function setThemeImg(item) {
+    // item.attr("src",item.attr("src").replace("_w.",theme_rep));
+// }
+// function resetThemeImg(item) {
+    // item.attr("src",item.attr("src").replace(theme_rep,"_w."));
+// }
+// function changeType(obj){
+    // active(obj,"theme",function (item) {
+        // setThemeImg(item.child(0));
+    // });
+    // resetThemeImg(obj.child(0));
+// }
 function active(obj,name,call){
   var active=obj.parent().findClass(name);
   active.removeClass(name);
-  call(active);
+  if(call!=undefined){
+    call(active);
+  }
   obj.addClass(name);
 }
-function openNavi(){
-  J.body().addClass("offset");
-  J.cls("cover").css("display","block");
-  J.cls("navi").addClass("offset");
-}
-function closeNavi() {
-    J.body().removeClass("offset");
-    J.cls("navi").removeClass("offset");
-        setTimeout(function(){
-        J.cls("cover").css("display","none");
-    },400);
-}
-function toggleBox(){
-  J.cls("box-cover").fadeToggle(300);
-  J.cls("box-wrapper").toggleClass("open");
-}
-function toggleTextbox(){
-  J.cls("box-cover").fadeToggle(300);
-  J.cls("textbox-wrapper").toggleClass("open");
+function initctip(){
+  J.cls("c-tip").each(function(item){
+    var ph=item.parent().hei();
+    var pw=item.parent().wid();
+    var h=item.hei();
+    var w=item.wid();
+    item.css({
+      left:J.random(0,pw-w)+"px",
+      top:J.random(0,ph-h)+"px",
+      transform:"rotate("+J.random(-30,30)+"deg)"
+    });
+  });
 }

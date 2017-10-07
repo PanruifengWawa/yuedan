@@ -1,212 +1,253 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf-8'>
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-touch-fullscreen" content="yes">
-  <meta content="telephone=no" name="format-detection">
-  <title>约单网--最真实的大学校园交友网站</title>
-  <link rel="icon" href="resource/img/icon.ico" type="image/x-icon"/>
-  
-  <link rel="stylesheet" type="text/css" href="resource/css/theajack.css"/>
-  <link rel="stylesheet" type="text/css" href="resource/css/common.css"/>
-  <link rel="stylesheet" type="text/css" href="resource/css/main.css"/>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <title>约单网--最真实的大学校园交友网站</title>
+    <link rel="icon" href="resource/images/icon.ico" type="image/x-icon"/>
+    
+    <link rel="stylesheet" type="text/css" href="resource/css/theajack.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/icon.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/box.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/scrollbar.css"/>
   <head>
   <body>
-    <div class="search-wrapper theme">
-      <div class="s-i-w search"><input type="text" class="input"></div>
-      <div class="s-i-w select"><input type="text" class="input"></div>
-      
-      <img class="search-img search" src="resource/img/icon/search_w.png" alt=""/>
-      <img class="search-img close" src="resource/img/icon/navi_close.png" onclick="toggleSearch()" alt=""/>
-    </div>
-    <div class="header-wrapper">
+    <div class="header-wrapper" id="header">
       <div class="header theme">
         我的校区
-        <img class="img logo-img" src="resource/img/yuedan_s.png" alt="">
-        <img class="img tail" onclick="openNavi()" src="resource/img/icon/navi_open.png" alt="">
-        <img class="img tail" onclick="toggleSearch()" src="resource/img/icon/search_w.png" alt="">
+        <img class="img logo-img" src="resource/images/yuedan_s.png" alt="">
+        <i class="icon icon-search open-search"></i>
+        <i class="icon icon-bars open-navi"></i>
       </div>
       <div class="type">
-        <div class="type-item theme">
-          <img src="resource/img/icon/all_w.png" alt=""/>
+        <div class="type-item theme theme-bb theme-br">
+          <i class="icon icon-home theme-text"></i>
           <span class="theme-text">全部</span>
         </div>
-        <div class="type-item">
-          <img class="theme-img" src="resource/img/icon/order_w.png" alt=""/>
+        <div class="type-item theme-bb theme-br">
+          <i class="icon icon-check-board theme-text"></i>
           <span class="theme-text">约单</span>
         </div>
-        <div class="type-item">
-          <img class="theme-img" src="resource/img/icon/post_w.png" alt=""/>
+        <div class="type-item theme-bb theme-br">
+          <i class="icon icon-chat-line theme-text"></i>
           <span class="theme-text">帖子</span>
         </div>
-        <div class="type-item">
-          <img class="theme-img" src="resource/img/icon/auction_w.png" alt=""/>
+        <div class="type-item theme-bb theme-br">
+          <i class="icon icon-dollar theme-text"></i>
           <span class="theme-text">拍卖</span>
         </div>
-      </div>
-    </div>
-    <div class="c-wrapper">
-      <div class="load-block">
-        放手刷新
-      </div>
-      <div class="item-list">
-        <div class="c-item boy">
-          <span class="c-tip">约体育</span>
-          <span class="c-tip rect">约体育</span>
-          <img class="c-photo" src="resource/img/yuedan.png" alt="" />
-          <img class="c-set" src="resource/img/icon/set_w.png" alt="" onclick="toggleBox()"/>
-          <div class="c-title">Marry：约个人一起去游泳。。</div>
-          <div class="c-text">赴约时间：2017-07-18 下午 3:00</div>
-          <div class="c-text">发布时间：2017-07-13 下午 3:00</div>
-          <div class="c-text">赴约地点：学校游泳馆</div>
-          <div class="c-text">受邀人数：1 人</div>
-          <div class="c-text">受约性别：不限</div>
-          <div class="c-text">付费方式：各自买单</div>
-          
-          <div class="tool-box">
-            <img class="tool-left" src="resource/img/icon/boy.png"/>
-            <img class="tool-left" src="resource/img/icon/order_b.png"/>
-            <div class="tool-right" onclick="toggleTextbox()">
-              <img src="resource/img/icon/order_w.png"/>
-              12
-            </div>
-            <div class="tool-right" onclick="toggleTextbox()">
-              <img src="resource/img/icon/like_w.png"/>
-              12
-            </div>
-          </div>
+        <div class="type-item create theme-bb">
+          <i class="icon icon-plus theme-text"></i>
         </div>
-        <div class="c-item girl">
-          <img class="c-photo" src="resource/img/yuedan.png" alt="" />
-          <img class="c-set" src="resource/img/icon/set_w.png" alt="" />
-          <div class="c-title">Marry：约个人一起去游泳。。</div>
-          <div class="c-text">赴约时间：2017-07-18 下午 3:00</div>
-          <div class="c-text">发布时间：2017-07-13 下午 3:00</div>
-          <div class="c-text">赴约地点：学校游泳馆</div>
-          <div class="c-text">受邀人数：1 人</div>
-          <div class="tool-box">
-            <img class="tool-left" src="resource/img/icon/girl.png"/>
-            <img class="tool-left" src="resource/img/icon/order_g.png"/>
-            <div class="tool-right">
-              <img src="resource/img/icon/order_w.png"/>
-              12
-            </div>
-            <div class="tool-right">
-              <img src="resource/img/icon/like_w.png"/>
-              12
-            </div>
-          </div>
+        <!-- <div id="createBtn" class="theme-border"> -->
+          <!-- <i class="icon icon-plus theme-text"></i> -->
+        <!-- </div> -->
+      </div>
+    </div>
+    <div id="wrapper">
+      <div class="c-wrapper" id="scroller">
+        <div id="pullDown">
+          <span class="pullDownIcon"></span>
+          <span class="pullDownLabel">下拉刷新...</span>
         </div>
-        <div class="c-item girl">
-          <img class="c-photo" src="resource/img/yuedan.png" alt="" />
-          <img class="c-set" src="resource/img/icon/set_w.png" alt="" />
-          <div class="c-title">Marry：约个人一起去游泳。。</div>
-          <div class="c-text">赴约时间：2017-07-18 下午 3:00</div>
-          <div class="c-text">发布时间：2017-07-13 下午 3:00</div>
-          <div class="c-text">赴约地点：学校游泳馆</div>
-          <div class="c-text">受邀人数：1 人</div>
-          <div class="tool-box">
-            <img class="tool-left" src="resource/img/icon/girl.png"/>
-            <img class="tool-left" src="resource/img/icon/order_g.png"/>
-            <div class="tool-right">
-              <img src="resource/img/icon/order_w.png"/>
-              12
+        <div class="item-list" id="main">
+            <div class="c-item boy">
+              <span class="c-tip">约体育</span>
+              <span class="c-tip rect">约体育</span>
+              <img class="c-photo" src="resource/images/icon3.png" alt="" />
+              <i class="c-set fc-boy icon icon-cog" onclick="openSet(this)"></i>
+              <div class="c-title">Marry：约个人一起去游泳。。</div>
+              <div class="c-text">赴约时间：2017-07-18 下午 3:00</div>
+              <div class="c-text">发布时间：2017-07-13 下午 3:00</div>
+              <div class="c-text">赴约地点：学校游泳馆</div>
+              <div class="c-text">受邀人数：1 人</div>
+              <div class="c-text">受约性别：不限</div>
+              <div class="c-text">付费方式：各自买单</div>
+              
+              <div class="tool-box">
+                <i class="tool-left fc-boy icon icon-mars"></i>
+                <i class="tool-left fc-boy icon icon-check-board"></i>
+                <div class="tool-right func-btn" onclick="Box.text.open()">
+                  <i class="icon icon-check-board" ></i>
+                  <span>12</span>
+                </div>
+                <div class="tool-right func-btn" onclick="Box.confirm.open()">
+                  <i class="icon icon-heart" ></i>
+                  <span>12</span>
+                </div>
+              </div>
             </div>
-            <div class="tool-right">
-              <img src="resource/img/icon/like_w.png"/>
-              12
+            <div class="c-item girl">
+              <span class="c-tip">约体育</span>
+              <span class="c-tip rect">约游泳</span>
+              <img class="c-photo" src="resource/images/icon3.png" alt="" />
+              <i class="c-set fc-girl icon icon-cog" onclick="openMulti()"></i>
+              <div class="c-title">Marry：约个人一起去游泳。。</div>
+              <div class="c-text">赴约时间：2017-07-18 下午 3:00</div>
+              <div class="c-text">发布时间：2017-07-13 下午 3:00</div>
+              <div class="c-text">赴约地点：学校游泳馆</div>
+              <div class="c-text">受邀人数：1 人</div>
+              <div class="tool-box">
+                <i class="tool-left fc-girl icon icon-venus"></i>
+                <i class="tool-left fc-girl icon icon-check-board"></i>
+                <div class="tool-right func-btn" onclick="openDate('date')">
+                  <i class="icon icon-check-board"></i>
+                  <span>12</span>
+                </div>
+                <div class="tool-right func-btn" onclick="openDate('datetime')">
+                  <i class="icon icon-heart" ></i>
+                  <span>12</span>
+                </div>
+              </div>
             </div>
-          </div>
+            <div class="c-item girl">
+              <span class="c-tip">约体育</span>
+              <span class="c-tip rect">约游泳</span>
+              <img class="c-photo" src="resource/images/icon3.png" alt="" />
+              <i class="c-set fc-girl icon icon-cog" onclick="openCascade(this)"></i>
+              <div class="c-title">Marry：约个人一起去游泳。。</div>
+              <div class="c-text">赴约时间：2017-07-18 下午 3:00</div>
+              <div class="c-text">发布时间：2017-07-13 下午 3:00</div>
+              <div class="c-text">赴约地点：学校游泳馆</div>
+              <div class="c-text">受邀人数：1 人</div>
+              <div class="tool-box">
+                <i class="tool-left fc-girl icon icon-venus"></i>
+                <i class="tool-left fc-girl icon icon-check-board"></i>
+                <div class="tool-right func-btn">
+                  <i class="icon icon-check-board"></i>
+                  <span>12</span>
+                </div>
+                <div class="tool-right func-btn">
+                  <i class="icon icon-heart" ></i>
+                  <span>12</span>
+                </div>
+              </div>
+            </div>
+            <div class="c-item boy"></div>
+            <div class="c-item girl"></div>
+            <div class="c-item boy"></div>
+            <div class="c-item girl"></div>
         </div>
-        <div class="c-item boy"></div>
-        <div class="c-item girl"></div>
-        <div class="c-item boy"></div>
-        <div class="c-item girl"></div>
-        <div class="c-item boy"></div>
-        <div class="c-item girl"></div>
-      </div>
-      
-      <div class="load-block">
-        放手加载
+        
+        <div id="pullUp">
+          <span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+        </div>
       </div>
     </div>
-    
-    <div class="cover" onclick="closeNavi()"></div>
-    <div class="navi theme">
-      <img class="navi-close" onclick="closeNavi()" src="resource/img/icon/navi_close.png" alt="" />
-      <div class="navi-item active">
-        <img class="navi-img" src="resource/img/icon/navi_school.png" alt="" />
-        我的校区
-      </div>
-      <div class="navi-item">
-        <img class="navi-img" src="resource/img/icon/navi_home.png" alt="" />
-        个人主页
-      </div>
-      <div class="navi-item">
-        <img class="navi-img" src="resource/img/icon/navi_mine.png" alt="" />
-        我的动态
-      </div>
-      <div class="navi-item">
-        <img class="navi-img" src="resource/img/icon/navi_coll.png" alt="" />
-        我的收藏
-      </div>
-      <div class="navi-item">
-        <img class="navi-img" src="resource/img/icon/navi_set.png" alt="" />
-        设置中心
-      </div>
-    </div>
-    <div class="box-cover"></div>
-    <div class="box-wrapper">
-      <div class="box-item">设置选项一</div>
-      <div class="box-item">选项二</div>
-      <div class="box-item" onclick="toggleBox()">取消</div>
-    </div>
-    
-    <div class="textbox-wrapper">
-      <div class="textbox-title">留言</div>
-      <textarea class="textbox input"></textarea>
-      <div class="textbox-btnw">
-        <span class="textbox-btn btn">提交</span>
-        <span class="textbox-btn btn" onclick="toggleTextbox()">取消</span>
-      </div>
-    </div>
-    
-    <!-- <script type="text/javascript" src="resource/js/less.min.js"></script> -->
     <script type="text/javascript" src="resource/js/jetter2.0.js"></script>
     <script type="text/javascript" src="resource/js/common.js"></script>
+    <script type="text/javascript" src="resource/js/box.js"></script>
+    <script type="text/javascript" src="resource/js/iscroll.js"></script>
     <script type="text/javascript">
       J.ready(function(){
         setTheme();
-        J.body().scrollTop=30;
+        Box.navi.init("main");
+        Box.search.init();
+        Box.config.fixBody=false;//因为与 iscroll 有冲突
         J.cls("type-item").clk("changeType(this)");
-        J.body().on("touchend",loadEvent)
+        initctip();
       });
-      var i=0;
-      function loadEvent(){
-        var top=J.body().scroll();
-        if(top<30){
-          //J.body().scrollTo(30);
-          J.body().scrollTo(30);
-          if(top==0){
-            J.show("刷新");
+      
+      var interval = null;// 定时器  
+      var topValue;
+      function onScroll(obj){
+        if(interval == null){
+          interval = setInterval(function(){
+            if(obj.scrollTop == topValue){
+              setLocation(obj);
+              clearInterval(interval);  
+              interval = null;  
+            }
+          }, 100);  
+        }
+        topValue = obj.scrollTop;  
+      }
+      function setLocation(obj){
+        var top=obj.scroll();
+        var a=top%50;
+        if(a>=25){
+          top+=(50-a);
+        }else{
+          top-=a;
+        }
+        obj.scrollTo(top,null,80);
+      }
+      var openEle=null;
+      function openSet(obj){
+        Box.select.open({
+          items:["男主题","女主题"],
+          onselect:[function(obj){
+            J.show(1);
+            setTheme("boy");
+          },function(obj){
+            J.show(2);
+            setTheme("girl");
+          }],
+          onclose:function(){
+            openEle.removeClass("icon-spin");
           }
-        }else if(top>J.body().hei()-J.height()-30){
-          //J.body().scrollTo(J.body().hei()-J.height()-30);
-          J.body().scrollTo(J.body().hei()-J.height()-30);
-          if(top==J.body().hei()-J.height()){
-            J.show("加载");
-            J.cls("item-list").append('<div class="c-item girl">item'+i+'</div>');
-            i++;
+        });
+        openEle=obj;
+        openEle.addClass("icon-spin");
+      }
+      function openMulti(){
+        Box.multi.open({
+          items:["苹果","梨子","香蕉","哈密瓜","猕猴桃"],
+          data:["a","b","c","d","e"],
+          onsubmit:function(items,datas){
+            J.show(J.toString(items));
+          },
+          oncancel:function(){
+            J.show("取消选择");
+          },
+          maxNum:3
+        });
+      }
+      function openCascade(){
+        Box.cascade.open({
+          items:[
+            "1","2"
+          ],
+          subItems:[
+            [11,12,13,14],
+            [21,22,23,24]
+          ],
+          type:"all",
+          onsubmit:function(data){
+            J.show(data)
           }
+        });
+      }
+      function openDate(type){
+        Box.date.open({
+          onsubmit:function(data){
+            J.show(data)
+          },
+          type:type
+        });
+      }
+      function changeType(obj){
+        if(obj.hasClass("create")){
+          Box.select.open({
+            items:["创建一个约单","发布一个帖子","发布一个拍卖"],
+            onselect:["goCreate('order')","goCreate('post')","goCreate('auction')"]
+          });
+        }else{
+          active(obj,"theme");
         }
       }
-      function toggleSearch(){
-        J.cls("search-wrapper").toggleClass("open");
+      function goCreate(type){
+        J.delay(function(){
+          J.jump('create/'+type);
+        },200);
       }
     </script>
   </body>

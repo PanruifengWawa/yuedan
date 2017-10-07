@@ -10,27 +10,26 @@
     <meta name="apple-touch-fullscreen" content="yes">
     <meta content="telephone=no" name="format-detection">
     <title>约单网--最真实的大学校园交友网站</title>
-    <link rel="icon" href="resource/img/icon.ico" type="image/x-icon"/>
+    <link rel="icon" href="resource/images/icon.ico" type="image/x-icon"/>
     
     <link rel="stylesheet" type="text/css" href="resource/css/theajack.css"/>
     <link rel="stylesheet" type="text/css" href="resource/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="resource/css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/icon.css"/>
   <head>
 <body>
   <div id="centerWrapper">
-    <img src="resource/img/yuedan_l.png" alt="" class="big-logo">
-    <div class="info-text">最真实的大学校园交友网站</div>
-    <div jet-form="login">
+    <img src="resource/images/yuedan_l.png" alt="" class="big-logo">
+    <div class="info-text">最真实的大学校园交友社区</div>
+    <div j-form="login">
       <div class="input-w">
-        <img src="resource/img/icon/login_user_b.png" alt="" class="icon">
-        <input type="text" class="input big has-icon" placeholder="使用学号或是手机号登录">
-        <span class="valid">输入有误</span>
+        <i class="icon icon-user"></i>
+        <input type="text" class="input big has-icon" j-valid="phone" placeholder="手机号登录"/>
       </div>
       <div class="input-w">
-        <img src="resource/img/icon/login_pw_b.png" alt="" class="icon">
-        <img src="resource/img/icon/pw_show_b.png" alt="" class="icon tail" onclick="toggleViewPw(this)">
-        <input type="password" class="input big has-icon">
-        <span class="valid tail">输入有误</span>
+        <i class="icon icon-lock"></i>
+        <i class="icon tail icon-eye-open" onclick="toggleViewPw(this)"></i>
+        <input type="password" j-valid="notnull" class="input big has-icon" placeholder="请输入密码"/>
       </div>
     </div>
     <div class="login-func-w">
@@ -47,7 +46,7 @@
     </div>
     <div class="login-func-w">
       <div class="btn">登录</div>
-      <span class="link">忘记密码</span>
+      <span class="link" onclick="J.jump('pwd')">忘记密码</span>
       <span class="link" onclick="J.jump('main')">游客访问</span>
       <span class="link" onclick="J.jump('regist')">前往注册</span>
     </div>
@@ -58,7 +57,7 @@
   <script type="text/javascript" src="resource/js/bg.js"></script>
   <script type="text/javascript">
     J.ready(function(){
-        checkMiddle(50);
+      checkMiddle(50);
     });
 
   </script>

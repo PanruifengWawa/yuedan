@@ -98,7 +98,7 @@ function Page(ele,w,btn,navi){
       if(btn!=false){
         var _top=(ele.hei()/2-20)+"px";
         ["left","right"].each(function(item){
-          par.append(J.ct("img.page-arrow.pa-"+item).attr("src","assets/images/"+item+".png").clk(new Function(par.varname+"."+item+"()")).css("top",_top));
+          par.append(J.ct("img.page-arrow.pa-"+item).attr("src","resource/images/"+item+".png").clk(new Function(par.varname+"."+item+"()")).css("top",_top));
         });
       }
       if(navi!=false){
