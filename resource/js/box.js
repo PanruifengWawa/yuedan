@@ -502,8 +502,10 @@
                   Box.cascade.checkList[index]=obj.child(i).txt();
                   Box.cascade._active(obj.child(i));//第一栏的item
                   if(Box.cascade.checkList.length==2){
-                    Box.cascade._active(obj.next().child(i));//第二栏对应选择哪一个
-                    Box.cascade._active(obj.next().child(i).child(0));//初始化第二栏的active
+                    var child=obj.next().child(i);
+                    Box.cascade._active(child);//第二栏对应选择哪一个
+                    Box.cascade._active(child.child(0));//初始化第二栏的active
+                    Box.cascade.checkList[1]=child.child(0).txt();
                     obj.next().scrollTop=0;//初始化第二栏的top
                   }
                 }
@@ -669,7 +671,8 @@
       inviteSex:["男","女","不限"],
       topic:["明星娱乐","学习考试","电竞游戏","拜师求艺","体育健身","旅游探险","美图美照","电子产品","其他"],
       auction:["电子产品","生活用品","学习用品","体育用品","票券类物品","虚拟物品","游戏相关","其他"],
-      bool:["是","否"]
+      bool:["是","否"],
+      single:["是","否","保密"]
     }
   }
   function _addTextBox(){

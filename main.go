@@ -35,10 +35,12 @@ func init() {
 	//error handler
 	beego.ErrorController(&controllers.ErrorController{})
 
+	//log
+	beego.SetLogger("file", `{"filename":"logs/log.log"}`)
+
 }
 
 func main() {
 
-	beego.SetLogger("file", `{"filename":"logs/log.log"}`)
 	beego.Run()
 }

@@ -111,7 +111,7 @@
         </div>
         <div class="input-w theme-bt theme-bl theme-br">
           <span class="input-title">是否单身:</span>
-          <input type="text" class="input" disabled j-name="isSingle" box-bind="single:bool" value="11111111"/>
+          <input type="text" class="input" disabled j-name="isSingle" box-bind="single:single" value="11111111"/>
         </div>
         <div class="input-w theme-border">
           <span class="input-title">祖籍:</span>

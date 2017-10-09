@@ -1,8 +1,10 @@
 package controllers
 
+//to delete
 import (
 	"encoding/json"
 	"errors"
+	"fmt"
 	"strconv"
 	"strings"
 	"yuedan/models"
@@ -33,7 +35,8 @@ func (c *TUserController) URLMapping() {
 // @router / [post]
 func (c *TUserController) Post() {
 	var v models.TUser
-	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
+	fmt.Println(c.Ctx.Input.RequestBody)
+	if err := c.ParseForm(&v); err == nil {
 		if _, err := models.AddTUser(&v); err == nil {
 			c.Ctx.Output.SetStatus(201)
 			c.Data["json"] = v
@@ -54,6 +57,7 @@ func (c *TUserController) Post() {
 // @Failure 403 :id is empty
 // @router /:id [get]
 func (c *TUserController) GetOne() {
+
 	idStr := c.Ctx.Input.Param(":id")
 	id, _ := strconv.Atoi(idStr)
 	v, err := models.GetTUserById(id)
