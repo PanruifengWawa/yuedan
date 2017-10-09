@@ -6,7 +6,7 @@ package routers
 
 import (
 	"yuedan/controllers"
-	"yuedan/filters"
+	//	"yuedan/filters"
 
 	"github.com/astaxie/beego"
 )
@@ -29,6 +29,6 @@ func init() {
 			),
 		),
 	)
-	beego.InsertFilter("/v1/*", beego.BeforeExec, filters.UserFilter)
+	//	beego.InsertFilter("/v1/*", beego.BeforeExec, filters.UserFilter)
 	beego.AddNamespace(ns)
 }

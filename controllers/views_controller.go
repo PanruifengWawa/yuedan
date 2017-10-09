@@ -22,6 +22,5 @@ func (c *HomeController) HomeView() {
 	c.Data["Email"] = "astaxie@gmail.com"
 	c.Data["xsrf_token"] = c.XSRFToken()
 	c.TplName = "index.tpl"
-
 	c.Render()
 }

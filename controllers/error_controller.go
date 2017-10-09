@@ -1,7 +1,9 @@
 package controllers
 
 import (
-	"fmt"
+	"yuedan/enums"
+
+	"yuedan/utils"
 
 	"github.com/astaxie/beego"
 )
@@ -15,7 +17,6 @@ func (this *ErrorController) Error404() {
 }
 
 func (this *ErrorController) ErrorParameterError() {
-	fmt.Println("aaaaa")
-	this.Data["json"] = "aaa"
+	this.Data["json"] = utils.GenerateDataWrapper(enums.ParameterError, "参数错误")
 	this.ServeJSON()
 }

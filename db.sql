@@ -14,5 +14,6 @@ create table t_token(
 	token_str char(36) not null unique,
 	user_id bigint(20) unsigned not null unique,
 	login_date timestamp not null,
+	user_type tinyint(1) not null default 1,
 	foreign key(user_id) references t_user(id) on delete cascade
 )engine=innodb default charset=utf8;

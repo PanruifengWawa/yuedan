@@ -259,6 +259,31 @@
                 }
             }
         },
+        "/t_user/login": {
+            "post": {
+                "tags": [
+                    "t_user"
+                ],
+                "description": "User Login",
+                "operationId": "TUserController.login",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "userName",
+                        "description": "userName",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} login success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
         "/t_user/{id}": {
             "get": {
                 "tags": [

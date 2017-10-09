@@ -24,6 +24,7 @@ func (c *TUserController) URLMapping() {
 	c.Mapping("GetAll", c.GetAll)
 	c.Mapping("Put", c.Put)
 	c.Mapping("Delete", c.Delete)
+	c.Mapping("Login", c.Login)
 }
 
 // Post ...
@@ -172,4 +173,16 @@ func (c *TUserController) Delete() {
 		c.Data["json"] = err.Error()
 	}
 	c.ServeJSON()
+}
+
+// login ...
+// @Title login
+// @Description User Login
+// @Param	userName		query	string	false	"userName"
+// @Success 200 {string} login success!
+// @Failure 403 id is empty
+// @router /login [post]
+func (c *TUserController) Login() {
+	fmt.Println(1)
+	c.Abort("ParameterError")
 }
