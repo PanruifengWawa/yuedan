@@ -1,0 +1,45 @@
+body{
+ padding-top:40px; 
+}
+#main{
+  padding:0;
+}
+.input-w{
+  background-color: #fff;
+  padding-left: 90px;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 10px;
+  padding-right: 15px;
+}
+.input:active{
+  background-color:#fff;
+}
+.input-w .create-title{
+  position: absolute;
+  left: 15px;
+  line-height: 35px;
+  font-size: 16px;
+}
+.input-w .input{
+  background-color: #fff;
+  color: #444;
+  height: 35px;
+  border: 1px solid #aaa;
+} 
+.input-w .valid{
+  top: 7px;
+}
+.input-w .valid.unpass{
+  right: 20px;
+}
+.editor .valid.unpass{
+  right: 20px;
+}
+.editor{
+  padding:0 15px;
+  padding-bottom:10px;
+}
+.create-btnw{
+  padding:0 15px;
+  padding-bottom:10px;
+}

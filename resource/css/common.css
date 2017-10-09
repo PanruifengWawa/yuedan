@@ -1,0 +1,422 @@
+
+input,
+select {
+  -webkit-appearance: none;
+  outline: none;
+}
+.fs-xl {
+  font-size: 20px;
+}
+.fs-l {
+  font-size: 18px;
+}
+.fs-m {
+  font-size: 16px;
+}
+.fs-s {
+  font-size: 14px;
+}
+.fs-xs {
+  font-size: 12px;
+}
+.m-xl {
+  margin: 20px;
+}
+.m-l {
+  margin: 15px;
+}
+.m-m {
+  margin: 10px;
+}
+.m-s {
+  margin: 5px;
+}
+.m-xs {
+  margin: 3px;
+}
+.p-xl {
+  padding: 15px;
+}
+.p-l {
+  padding: 15px;
+}
+.p-m {
+  padding: 10px;
+}
+.p-s {
+  padding: 5px;
+}
+.p-xs {
+  padding: 3px;
+}
+.bold {
+  font-weight: bold;
+}
+.underline {
+  text-decoration: underline;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.center {
+  margin: 0 auto!important;
+}
+
+/* // #1795f9 #007cf0 */
+/* // #EE5857 #1795f9 */
+.bg-boy {
+  background-color: #1795f9!important;
+}
+.border-boy {
+  border: 1px solid #1795f9!important;
+}
+.fc-boy {
+  color: #1795f9!important;
+}
+.bg-l-boy {
+  background-color: #0785e9!important;
+}
+.bg-girl {
+  background-color: #EE5857!important;
+}
+.border-girl {
+  border: 1px solid #EE5857!important;
+}
+.fc-girl {
+  color: #EE5857!important;
+}
+.bg-l-girl {
+  background-color: #ffe9f4!important;
+}
+.fc-white {
+  color: #fff!important;
+}
+.fc-dark {
+  color: #262626!important;
+}
+.fc-gray {
+  color: #808080!important;
+}
+.fc-l-gray {
+  color: #a6a6a6!important;
+}
+.fc-xl-gray {
+  color: #d9d9d9!important;
+}
+.block {
+  display: block;
+}
+.i-block {
+  display: inline-block;
+}
+.hide {
+  display: none;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.pointer {
+  cursor: pointer;
+}
+.overflow-hide{
+  
+}
+body {
+  background-color: #f8f8fa;
+  font-size: 14px;
+  /* max-width: 600px; */
+  padding:0;
+  margin: 0 auto!important;
+  font-family:microsoft YAHEI!important;
+}
+#bgCanvas,
+#bgCover {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#bgCanvas {
+  z-index: -2;
+}
+#bgCover {
+  z-index: -1;
+  background-color: rgba(230, 230, 235, 0.4);
+}
+.btn {
+  background-color: #1795f9;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.btn:active {
+  background-color: #0373dc;
+}
+.btn.girl {
+  background-color: #EE5857;
+}
+.btn.girl:active {
+  background-color: #d65251;
+}
+.nobg-btn:active{
+  background-color:rgba(255,255,255,0.3)
+}
+.input {
+  background-color: rgba(235, 250, 255, 0.7);
+  font-size: 16px;
+  color: #808080;
+  border: 1px solid #1795f9;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 5px;
+  outline: none;
+}
+.input:active {
+  border: 1px solid #1795f9;
+}
+.input.girl {
+  background-color: #ffe9f4;
+  border: 1px solid #EE5857;
+}
+.input.big {
+  width: 100%;
+}
+#centerWrapper {
+  padding: 15px;
+}
+.input-w {
+  margin: 10px 0;
+  width: 100%;
+  position: relative;
+  overflow:hidden;
+}
+.input-w .icon {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  color: #1795f9;
+  font-size: 20px;
+}
+.input-w .icon.tail {
+  left:inherit;
+  right: 8px;
+}
+.input-w .input {
+  width: 100%;
+  transition: border 0.3s ease;
+  -webkit-transition: border 0.3s ease;
+  -moz-transition: border 0.3s ease;
+  -o-transition: border 0.3s ease;
+  -ms-transition: border 0.3s ease;
+}
+.input-w .input.has-icon {
+  padding-left: 40px;
+}
+.input-w .input.unpass {
+  border: 1px solid #e44;
+  background-color: rgba(255, 245, 245, 0.2);
+}
+.input-w .valid {
+  font-size: 14px;
+  color: #f44;
+  position: absolute;
+  right: -30px;
+  opacity: 0;
+  top: 9px;
+  z-index: -1;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+.input-w .valid.unpass {
+  opacity: 1;
+  right: 10px;
+  z-index: 1;
+}
+.input-w .valid.valid-tail.unpass {
+  right: 40px;
+}
+.input-w .valid.valid-btn.unpass {
+  right: 120px;
+}
+.input-w .valid.require {
+  right: 1px;
+  font-size: 20px;
+  display: block;
+  margin-top: 3px;
+}
+
+.send-code{
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  height: 38px;
+  line-height: 40px;
+  width: 110px;
+  text-align: center;
+  color: #fff;
+}
+.radio-w {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+.radio-w .radio-box {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  border: 1px solid #1795f9;
+  position: relative;
+}
+.radio-w .radio-box.girl {
+  border: 1px solid #EE5857;
+}
+.radio-w .radio-box.girl .radio-o {
+  background-color: #EE5857;
+}
+.radio-w .radio-o {
+  width: 14px;
+  height: 14px;
+  background-color: #1795f9;
+  position: absolute;
+  display: block;
+  opacity: 0;
+  left: 2px;
+  top: 2px;
+  transition: opacity 0.3s ease;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+}
+.radio-w .radio-o.active {
+  opacity: 1;
+}
+.radio-w .radio-text {
+  color: #808080;
+  position: relative;
+  top: -4px;
+}
+.link {
+  text-decoration: underline;
+  color: #a6a6a6;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+}
+/* .link:hover { */
+  /* color: #666; */
+/* } */
+.link:active {
+  color: #333;
+}
+.copyright {
+  color: #a6a6a6;
+  width: 100%;
+  position: fixed;
+  bottom: 5px;
+  text-align: center;
+  font-size: 12px;
+  left: 0;
+}
+
+
+/* header */
+.header-wrapper{
+}
+.header {
+  height: 40px;
+  line-height:40px;
+  text-align:center;
+  font-size: 18px;
+  font-weight: bold;
+}
+.logo-img{
+  float:left;
+}
+.header .img {
+  height: 34px;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+}
+.header .tail {
+  float:right;
+  margin: 0 5px;
+}
+.header .search-w {
+  padding: 5px 40px 5px 80px;
+}
+.header .search-w .input {
+  width: 50px;
+  background-color: #ffffff;
+  border: 1px solid #d9d9d9;
+  height: 30px;
+  float: left;
+}
+.header .search-w .input.search {
+  width: 50%;
+}
+.header .search-w .input.select {
+  width: 30%;
+}
+.header .search-w .search-btn {
+  width: 20%;
+  height: 30px;
+  float: left;
+  padding-top: 2px;
+  text-align: center;
+  border: 1px solid #d9d9d9;
+}
+.header .search-w .search-btn img {
+  height: 30px;
+  position: relative;
+  top: -3px;
+}
+.header.boy {
+  background-color: #1795f9;
+}
+
+/* end header */
+
+.func-btn{
+  height: 24px;
+  width: 55px;
+  margin: 3px;
+  color: #fff;
+  position: relative;
+  padding-left: 24px;
+  text-align: center;
+  white-space: nowrap;
+}
+.func-btn .icon{
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  font-size: 16px;
+}
+.func-btn span{
+  font-size:12px;
+  line-height:24px;
+}

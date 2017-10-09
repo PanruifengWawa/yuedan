@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
+  <head>
+    <meta charset='utf-8'>
+    <meta name="keywords" content="">  
+    <meta name="description" content="">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <title>约单网--最真实的大学校园交友网站</title>
+    <link rel="icon" href="resource/images/icon.ico" type="image/x-icon"/>
+    
+    <link rel="stylesheet" type="text/css" href="resource/css/theajack.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/icon.css"/>
+  <head>
+=======
 <head>
   <title>Beego</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -74,12 +93,35 @@
   </style>
 </head>
 
+>>>>>>> 38e1d2a80b303eda22a0965f43867d2d54603ff0
 <body>
-  <header>
-    <h1 class="logo">Welcome to Beego</h1>
-    <div class="description">
-      Beego is a simple & powerful Go web framework which is inspired by tornado and sinatra.
+  <div id="centerWrapper">
+    <img src="resource/images/yuedan_l.png" alt="" class="big-logo">
+    <div class="info-text">最真实的大学校园交友社区</div>
+    <div j-form="login">
+      <div class="input-w">
+        <i class="icon icon-user"></i>
+        <input type="text" class="input big has-icon" j-valid="phone" placeholder="手机号登录"/>
+      </div>
+      <div class="input-w">
+        <i class="icon icon-lock"></i>
+        <i class="icon tail icon-eye-open" onclick="toggleViewPw(this)"></i>
+        <input type="password" j-valid="notnull" class="input big has-icon" placeholder="请输入密码"/>
+      </div>
     </div>
+<<<<<<< HEAD
+    <div class="login-func-w">
+      <div class="radio-w" onclick="toggleRadio(this)">
+        <span class="radio-box"></span>
+        <span class="radio-o"></span>
+        <span class="radio-text">记住密码</span>
+      </div>
+      <div class="radio-w" onclick="toggleRadio(this)">
+        <span class="radio-box"></span>
+        <span class="radio-o"></span>
+        <span class="radio-text">自动登录</span>
+      </div>
+=======
 	
   </header>
   <footer>
@@ -88,10 +130,29 @@
       <a href="http://{{.Website}}">{{.Website}}</a> /
       Contact me: 
       <a class="email" href="mailto:{{.Email}}">{{.Email}}</a>
+>>>>>>> 38e1d2a80b303eda22a0965f43867d2d54603ff0
     </div>
-  </footer>
-  <div class="backdrop"></div>
+    <div class="login-func-w">
+      <div class="btn">登录</div>
+      <span class="link" onclick="J.jump('pwd')">忘记密码</span>
+      <span class="link" onclick="J.jump('main')">游客访问</span>
+      <span class="link" onclick="J.jump('regist')">前往注册</span>
+    </div>
+  </div>
+  <div class="copyright">© 2017 Yuedanwang All Right Reserved</div>
+  <script type="text/javascript" src="resource/js/jetter2.0.js"></script>
+  <script type="text/javascript" src="resource/js/common.js"></script>
+  <script type="text/javascript" src="resource/js/bg.js"></script>
+  <script type="text/javascript">
+    J.ready(function(){
+      checkMiddle(50);
+    });
+
+  </script>
 </body>
+<<<<<<< HEAD
+</html>
+=======
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 jQuery.postJSON = function(url, args, callback) {
@@ -127,3 +188,4 @@ jQuery.postJSON("http://localhost:8080/v1/t_user",args,myCall);
 
 </script>
 </html>
+>>>>>>> 38e1d2a80b303eda22a0965f43867d2d54603ff0

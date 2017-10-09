@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <title>约单网--个人主页</title>
+    <link rel="icon" href="resource/images/icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/theajack.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/icon.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/box.css"/>
+    <link rel="stylesheet" type="text/css" href="resource/css/center.css"/>
+  <head>
+  <body>
+    <div class="header-wrapper" id="header">
+      <div class="header theme">
+        个人主页
+        <img class="img logo-img" src="resource/images/yuedan_s.png" alt="">
+        <i class="icon icon-bars open-navi"></i>
+      </div>
+    </div>
+    <div id="main">
+      <div class="top-part">
+        <i class="icon icon-cog mod-info theme-text" onclick="openSelect()"></i>
+        <div class="btn-w">
+          <div class="func-btn theme">
+            <i class="icon icon-thumbs-up mod-info"></i>
+            <span>11</span>
+          </div>
+          <div class="func-btn theme" onclick="openMsgBox()">
+            <i class="icon icon-chat-dot mod-info"></i>
+            <span>11</span>
+          </div>
+          <div class="func-btn theme">
+            <i class="icon icon-heart mod-info"></i>
+            <span>11</span>
+          </div>
+        </div>
+        <img src="resource/images/icon3.png" class="center-photo theme-border" alt="" />
+        <div class="exp-wrapper">
+          <div>L3(班长)</div>
+          <div class="exp-bar-wrapper theme-border">
+            <div class="exp-bar theme"></div>
+          </div>
+          <div>200/300</div>
+        </div>
+      </div>
+      
+      <div class="info-part">
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">昵称:</span>
+          <input type="text" class="input" disabled j-name="nickname" value="11111111"/>
+        </div>
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">真实姓名:</span>
+          <input type="text" class="input" disabled j-name="realName" value="11111111"/>
+        </div>
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">性别:</span>
+          <input type="text" class="input" disabled j-name="sex" box-bind="single:sex" value="11111111"/>
+        </div>
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">生日:</span>
+          <input type="text" class="input" disabled j-name="birth" box-bind="date" value="1111-11-11"/>
+        </div>
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">邮箱:</span>
+          <input type="text" class="input" disabled j-name="email" j-valid="email" value="111@qq.com"/>
+        </div>
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">学校名称:</span>
+          <input type="text" class="input" disabled j-name="school" value="11111111"/>
+        </div>
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">所在校区:</span>
+          <input type="text" class="input" disabled j-name="schoolPart" box-bind="single:schoolPart" value="11111111"/>
+        </div>
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">宿舍楼:</span>
+          <input type="text" class="input" disabled j-name="dormitory" value="11111111"/>
+        </div>
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">学院:</span>
+          <input type="text" class="input" disabled j-name="college" value="11111111"/>
+        </div>
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">专业:</span>
+          <input type="text" class="input" disabled j-name="specialty" value="11111111"/>
+        </div>
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">入学年份:</span>
+          <input type="text" class="input" disabled j-name="schoolYear" box-bind="single:schoolYear" value="11111111"/>
+        </div>
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">当前学历:</span>
+          <input type="text" class="input" disabled j-name="education" box-bind="single:education" value="11111111"/>
+        </div>
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">身份:</span>
+          <input type="text" class="input" disabled j-name="identity" box-bind="single:identity" value="11111111"/>
+        </div>
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">兴趣爱好:</span>
+          <input type="text" class="input" disabled j-name="hobby" box-bind="multi:hobby" value="11111111"/>
+        </div>
+        <div class="input-w theme-bt theme-bl theme-br">
+          <span class="input-title">是否单身:</span>
+          <input type="text" class="input" disabled j-name="isSingle" box-bind="single:single" value="11111111"/>
+        </div>
+        <div class="input-w theme-border">
+          <span class="input-title">祖籍:</span>
+          <input type="text" class="input" disabled j-name="home" value="11111111" box-bind="city"/>
+        </div>
+        <div class="btn theme" id="saveBtn" onclick="save()">保存</div>
+      </div>
+    </div>
+    <script type="text/javascript" src="resource/js/jetter2.0.js"></script>
+    <script type="text/javascript" src="resource/js/common.js"></script>
+    <script type="text/javascript" src="resource/js/box.js"></script>
+    <script type="text/javascript">
+      J.ready(function(){
+        setTheme();
+        Box.navi.init("center");
+      });
+      function openSelect(){
+        Box.select.open({
+          items:["修改个人信息","修改登录密码","修改绑定手机"],
+          onselect:[edit,function(){
+            Box.form.open({
+              title:"修改登录密码",
+              type:"pwd",
+              onsubmit:function(data){
+                J.show(J.toString(data))
+              }
+            });
+          },function(){
+            Box.form.open({
+              title:"修改绑定手机",
+              type:"phone",
+              onsubmit:function(data){
+                J.show(J.toString(data))
+              }
+            });
+          }]
+        });
+      }
+      function edit(){
+        J.cls("info-part").addClass("active")
+          .findClass("input").removeAttr("disabled");
+        J.id("saveBtn").show();
+      }
+      function save(){
+        J.cls("info-part").removeClass("active")
+          .findClass("input").attr("disabled","true");
+        J.id("saveBtn").slideUp();
+      }
+      function openMsgBox(){
+        
+      }
+    </script>
+  </body>
+</html>

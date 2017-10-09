@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no" name="format-detection">
+    <title>约单网--发布帖子</title>
+    <link rel="icon" href="resource/images/icon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../resource/css/theajack.css"/>
+    <link rel="stylesheet" type="text/css" href="../resource/css/icon.css"/>
+    <link rel="stylesheet" type="text/css" href="../resource/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../resource/css/box.css"/>
+    <link rel="stylesheet" type="text/css" href="../resource/css/editor.css"/>
+    <link rel="stylesheet" type="text/css" href="../resource/css/create.css"/>
+  <head>
+  <body>
+    <div class="header-wrapper" id="header">
+      <div class="header theme">
+        发布帖子
+        
+        <i class="icon icon icon-arrow-left back" onclick="J.back()"></i>
+        <i class="icon icon-bars open-navi"></i>
+      </div>
+    </div>
+    <div id="main" j-form="order">
+      <div class="input-w">
+        <span class="create-title theme-text">帖子标题</span>
+        <input class="input" j-valid="notnull" type="text" j-name="title"/>
+      </div>
+      <div class="input-w">
+        <span class="create-title theme-text">帖子话题</span>
+        <input class="input" j-valid="notnull" type="text" j-name="topic" box-bind="single:topic"/>
+      </div>
+      <div class="editor theme-text" e-title="帖子正文" e-name="content" e-valid="notnull">
+      </div>
+      <div class="create-btnw">
+        <div class="create-btn btn theme">提交</div>
+      </div>
+      
+    </div>
+    
+    <script type="text/javascript" src="../resource/js/jetter2.0.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+    <script type="text/javascript" src="../resource/js/box.js"></script>
+    <script type="text/javascript" src="../resource/js/editor.js"></script>
+    <script type="text/javascript">
+      J.ready(function(){
+        setTheme();
+        Box.navi.init();
+      });
+    </script>
+  </body>
+</html>

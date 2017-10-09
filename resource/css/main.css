@@ -1,0 +1,154 @@
+
+body {
+  position: relative;
+  left: 0%;
+  /* max-width:600px; */
+  padding:0;
+  margin:0;
+}
+
+
+.type {
+  height: 40px;
+  text-align: center;
+  position:relative;
+}
+.type .type-item {
+  width: 22%;
+  float: left;
+  /* border-right: 1px solid #d9d9d9; */
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  background-color: #f8f8fa;
+  /* border-top: 1px solid #fff; */
+  /* border-bottom: 1px solid #d9d9d9;  */
+}
+.type .type-item:last-child {
+  border-right: none;
+}
+.type .type-item.theme .theme-text {
+  color: #fff!important;
+}
+.type-item .icon{
+  font-size:20px
+}
+.type-item.create{
+  width:12%;
+}
+.type-item.create .icon{
+  font-size: 25px;
+  line-height: 40px;
+}
+.c-wrapper{
+  padding:85px 5px 0 5px;
+}
+.item-list{
+  /* padding: 5px; */
+  /* position:relative; */
+  /* left:0; */
+  /* transition: left 0.3s ease; */
+  /* -webkit-transition: left 0.3s ease; */
+  /* -moz-transition: left 0.3s ease; */
+  /* -o-transition: left 0.3s ease; */
+  /* -ms-transition: left 0.3s ease; */
+}
+/* .item-list.offset{ */
+  /* left:-70%; */
+/* } */
+.c-item{
+  margin-bottom:5px;
+  padding:10px;
+  padding-left:50px;
+  padding-bottom:30px;
+  position:relative;
+  color: #808080;
+}
+.c-item.boy{
+  /* background-color: #ebfaff; */
+  background-color: #fff;
+  border: 1px solid #1795f9;
+}
+.c-item.girl{
+  /* background-color: #ffe9f4; */
+  background-color: #fff;
+  border: 1px solid #EE5857;
+}
+.c-title{
+  font-size: 14px;
+  font-weight:bold;
+}
+.c-text{
+  font-size: 12px;
+}
+.c-item.boy .c-title{
+  color: #1795f9;
+}
+.c-item.girl .c-title{
+  color: #EE5857;
+}
+.c-set,.c-photo{
+  position:absolute;
+}
+.c-photo{
+  top:5px;
+  left:5px;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+}
+.c-item.boy .c-photo{
+  border:1px solid #1795f9;
+}
+.c-item.girl .c-photo{
+  border:1px solid #EE5857;
+}
+.c-set{
+  top:5px;
+  right:5px;
+  font-size:30px;
+}
+.c-item .tool-box{
+  height:30px;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  padding:0 3px;
+}
+.tool-left{
+  font-size:24px;
+  float:left;
+  margin:3px;
+}
+.tool-right{
+  float: right;
+}
+.c-item.boy .tool-right{
+  background-color:#1795f9;
+}
+.c-item.girl .tool-right{
+  background-color:#EE5857;
+}
+.c-tip{
+  color: rgba(150,150,150,.5);
+  border:3px dashed rgba(150,150,150,.5);
+  border-radius:50%;
+  padding:8px;
+  font-size:14px;
+  font-weight:bold;
+  position:absolute;
+}
+.c-tip.rect{
+  border-radius:0;
+  padding:5px;
+}
+
+.load-block{
+  color: #808080;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
