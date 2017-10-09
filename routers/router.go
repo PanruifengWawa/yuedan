@@ -28,15 +28,15 @@ func init() {
 	beego.Router("/create/auction", &controllers.CreateAuctionController{})
 
 	ns := beego.NewNamespace("/v1",
-		beego.NSNamespace("/t_user",
+		beego.NSNamespace("/user",
 			beego.NSInclude(
-				&controllers.TUserController{},
+				&controllers.UserController{},
 			),
 		),
 
-		beego.NSNamespace("/t_token",
+		beego.NSNamespace("/token",
 			beego.NSInclude(
-				&controllers.TTokenController{},
+				&controllers.TokenController{},
 			),
 		),
 	)

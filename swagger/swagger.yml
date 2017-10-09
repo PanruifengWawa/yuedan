@@ -7,12 +7,12 @@ info:
     email: 46937922@qq.com
 basePath: /v1
 paths:
-  /t_token/:
+  /token/:
     get:
       tags:
-      - t_token
-      description: get TToken
-      operationId: TTokenController.Get All
+      - token
+      description: get Token
+      operationId: TokenController.Get All
       parameters:
       - in: query
         name: query
@@ -42,31 +42,31 @@ paths:
       responses:
         "200":
           schema:
-            $ref: '#/definitions/models.TToken'
+            $ref: '#/definitions/models.Token'
         "403": {}
     post:
       tags:
-      - t_token
-      description: create TToken
-      operationId: TTokenController.Post
+      - token
+      description: create Token
+      operationId: TokenController.Post
       parameters:
       - in: body
         name: body
-        description: body for TToken content
+        description: body for Token content
         required: true
         schema:
-          $ref: '#/definitions/models.TToken'
+          $ref: '#/definitions/models.Token'
       responses:
         "201":
-          description: '{int} models.TToken'
+          description: '{int} models.Token'
         "403":
           description: body is empty
-  /t_token/{id}:
+  /token/{id}:
     get:
       tags:
-      - t_token
-      description: get TToken by id
-      operationId: TTokenController.Get One
+      - token
+      description: get Token by id
+      operationId: TokenController.Get One
       parameters:
       - in: path
         name: id
@@ -76,37 +76,14 @@ paths:
       responses:
         "200":
           schema:
-            $ref: '#/definitions/models.TToken'
+            $ref: '#/definitions/models.Token'
         "403":
           description: :id is empty
-    put:
-      tags:
-      - t_token
-      description: update the TToken
-      operationId: TTokenController.Put
-      parameters:
-      - in: path
-        name: id
-        description: The id you want to update
-        required: true
-        type: string
-      - in: body
-        name: body
-        description: body for TToken content
-        required: true
-        schema:
-          $ref: '#/definitions/models.TToken'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/models.TToken'
-        "403":
-          description: :id is not int
     delete:
       tags:
-      - t_token
-      description: delete the TToken
-      operationId: TTokenController.Delete
+      - token
+      description: delete the Token
+      operationId: TokenController.Delete
       parameters:
       - in: path
         name: id
@@ -118,136 +95,67 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
-  /t_user/:
-    get:
-      tags:
-      - t_user
-      description: get TUser
-      operationId: TUserController.Get All
-      parameters:
-      - in: query
-        name: query
-        description: Filter. e.g. col1:v1,col2:v2 ...
-        type: string
-      - in: query
-        name: fields
-        description: Fields returned. e.g. col1,col2 ...
-        type: string
-      - in: query
-        name: sortby
-        description: Sorted-by fields. e.g. col1,col2 ...
-        type: string
-      - in: query
-        name: order
-        description: Order corresponding to each sortby field, if single value, apply
-          to all sortby fields. e.g. desc,asc ...
-        type: string
-      - in: query
-        name: limit
-        description: Limit the size of result set. Must be an integer
-        type: string
-      - in: query
-        name: offset
-        description: Start position of result set. Must be an integer
-        type: string
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/models.TUser'
-        "403": {}
+  /user/:
     post:
       tags:
-      - t_user
-      description: create TUser
-      operationId: TUserController.Post
+      - user
+      description: user register
+      operationId: UserController.register
       parameters:
       - in: body
-        name: body
-        description: body for TUser content
-        required: true
-        schema:
-          $ref: '#/definitions/models.TUser'
-      responses:
-        "201":
-          description: '{int} models.TUser'
-        "403":
-          description: body is empty
-  /t_user/{id}:
-    get:
-      tags:
-      - t_user
-      description: get TUser by id
-      operationId: TUserController.Get One
-      parameters:
-      - in: path
-        name: id
-        description: The key for staticblock
-        required: true
-        type: string
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/models.TUser'
-        "403":
-          description: :id is empty
-    put:
-      tags:
-      - t_user
-      description: update the TUser
-      operationId: TUserController.Put
-      parameters:
-      - in: path
-        name: id
-        description: The id you want to update
+        name: StudentId
+        description: student id
         required: true
         type: string
       - in: body
-        name: body
-        description: body for TUser content
+        name: StudentPassword
+        description: student password
         required: true
-        schema:
-          $ref: '#/definitions/models.TUser'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/models.TUser'
-        "403":
-          description: :id is not int
-    delete:
-      tags:
-      - t_user
-      description: delete the TUser
-      operationId: TUserController.Delete
-      parameters:
-      - in: path
-        name: id
-        description: The id you want to delete
+        type: string
+      - in: body
+        name: Phone
+        description: phone
+        required: true
+        type: string
+      - in: body
+        name: School
+        description: school name
         required: true
         type: string
       responses:
-        "200":
-          description: '{string} delete success!'
-        "403":
-          description: id is empty
-  /t_user/login:
+        error:
+          description: '{ "Status": 1, "Error": "参数错误", "Data": "用户已存在", "PageSize":
+            0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }'
+        success:
+          description: '{ "Status": 0, "Error": "", "Data": "成功", "PageSize": 0, "PageIndex":
+            0, "TotalPage": 0, "TotalCount": 0 }'
+  /user/login:
     post:
       tags:
-      - t_user
-      description: User Login
-      operationId: TUserController.login
+      - user
+      description: user login
+      operationId: UserController.login
       parameters:
-      - in: query
-        name: userName
-        description: userName
+      - in: body
+        name: StudentId
+        description: student id
+        required: true
+        type: string
+      - in: body
+        name: Password
+        description: password
+        required: true
         type: string
       responses:
-        "200":
-          description: '{string} login success!'
-        "403":
-          description: id is empty
+        error:
+          description: '{ "Status": 1, "Error": "权限错误", "Data": "账号或密码错误", "PageSize":
+            0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }'
+        success:
+          description: '{ "Status": 0, "Error": "", "Data": "c0b7a6dd-552c-482e-b569-bcca89de5146",
+            "PageSize": 0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }'
 definitions:
-  models.TToken:
-    title: TToken
+  models.Token:
+    title: Token
     type: object
     properties:
       Id:
@@ -259,22 +167,73 @@ definitions:
       TokenStr:
         type: string
       UserId:
-        $ref: '#/definitions/models.TUser'
-  models.TUser:
-    title: TUser
+        $ref: '#/definitions/models.User'
+      UserType:
+        type: integer
+        format: int32
+  models.User:
+    title: User
     type: object
     properties:
+      AncestralHome:
+        type: string
+      Birth:
+        type: string
+        format: string
+      College:
+        type: string
+      Dormitory:
+        type: string
+      Education:
+        type: string
+      Email:
+        type: string
+      Exp:
+        type: integer
+        format: int64
+      Hobby:
+        type: string
       Id:
         type: integer
         format: int64
+      Identity:
+        type: string
+      IsSingle:
+        type: string
+      Lvl:
+        type: integer
+        format: int64
+      Nickname:
+        type: string
       Password:
         type: string
-      UserName:
+      Phone:
         type: string
+      Photo:
+        type: string
+      RealName:
+        type: string
+      School:
+        type: string
+      SchoolPart:
+        type: string
+      SchoolYear:
+        type: string
+      Sex:
+        type: string
+      Specialty:
+        type: string
+      StudentId:
+        type: string
+      StudentPassword:
+        type: string
+      UserType:
+        type: integer
+        format: int32
 tags:
-- name: t_user
+- name: user
   description: |
-    TUserController operations for TUser
-- name: t_token
+    UserController operations for User
+- name: token
   description: |
-    TTokenController operations for TToken
+    TokenController operations for Token

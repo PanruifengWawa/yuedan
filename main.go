@@ -19,7 +19,7 @@ func init() {
 	host := beego.AppConfig.String("mysqlhost")
 	port := beego.AppConfig.String("mysqlport")
 	dbName := beego.AppConfig.String("mysqldb")
-	mysqlurl := user + ":" + password + "@tcp(" + host + ":" + port + ")/" + dbName
+	mysqlurl := user + ":" + password + "@tcp(" + host + ":" + port + ")/" + dbName + "?charset=utf8&loc=Local"
 
 	orm.RegisterDataBase("default", "mysql", mysqlurl)
 	if beego.BConfig.RunMode == "dev" {
