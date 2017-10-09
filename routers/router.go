@@ -26,7 +26,6 @@ func init() {
 	beego.Router("/create/order", &controllers.CreateOrderController{})
 	beego.Router("/create/post", &controllers.CreatePostController{})
 	beego.Router("/create/auction", &controllers.CreateAuctionController{})
-	beego.Router("/404", &controllers.Page404Controller{})
 
 	ns := beego.NewNamespace("/v1",
 		beego.NSNamespace("/t_user",
