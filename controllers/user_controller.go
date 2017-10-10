@@ -112,13 +112,15 @@ func (c *UserController) Login() {
 // @Title Get User Details
 // @Description Get User Details
 // @Param	token	header	String	true	"user token"
-// @Success success { "Status": 0, "Error": "", "Data": "c0b7a6dd-552c-482e-b569-bcca89de5146", "PageSize": 0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }
-// @Failure error { "Status": 1, "Error": "权限错误", "Data": "账号或密码错误", "PageSize": 0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }
+// @Success success { "Status": 0, "Error": "", "Data": { "Id": 2, "StudentId": "1253024", "StudentPassword": "", "Password": "", "Phone": "13761463756", "Photo": "", "Nickname": "", "RealName": "", "Sex": "", "Birth": "0001-01-01T00:00:00Z", "Email": "", "School": "同济大学", "SchoolPart": "", "College": "", "Dormitory": "", "Specialty": "", "Education": "", "SchoolYear": "", "Identity": "", "Hobby": "", "IsSingle": "", "AncestralHome": "", "Lvl": 0, "Exp": 0, "UserType": 1 }, "PageSize": 0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }
+// @Failure error { "Status": 1, "Error": "权限错误", "Data": "用户未登录", "PageSize": 0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }
 // @router /details [get]
 func (c *UserController) GetUserDetails() {
 	userId, _ := c.Ctx.Input.GetData("userId").(int)
 	user, findUserErr := models.GetUserById(userId)
 	if findUserErr == nil {
+		user.StudentPassword = ""
+		user.Password = ""
 		c.Data["json"] = utils.GenerateDataWrapper(enums.Success, user)
 	} else {
 		c.Data["json"] = utils.GenerateDataWrapper(enums.DBError, "数据库错误")
@@ -136,9 +138,8 @@ func (c *UserController) GetUserDetails() {
 // @Param	Password	body	string	false	"Password"
 // @Param	RealName	body	string	false	"RealName"
 // @Param	Sex	body	string	false	"Sex"
-// @Param	Birth	body	date	false	"Birth"
+// @Param	Birth	body	string	false	"Birth"
 // @Param	Email	body	string	false	"Email"
-// @Param	School	body	string	false	"School"
 // @Param	SchoolPart	body	string	false	"SchoolPart"
 // @Param	College	body	string	false	"College"
 // @Param	Specialty	body	string	false	"Specialty"
@@ -149,8 +150,8 @@ func (c *UserController) GetUserDetails() {
 // @Param	Hobby	body	string	false	"Hobby"
 // @Param	IsSingle	body	string	false	"IsSingle"
 // @Param	AncestralHome	body	string	false	"AncestralHome"
-// @Success success { "Status": 0, "Error": "", "Data": "c0b7a6dd-552c-482e-b569-bcca89de5146", "PageSize": 0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }
-// @Failure error { "Status": 1, "Error": "权限错误", "Data": "账号或密码错误", "PageSize": 0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }
+// @Success success { "Status": 0, "Error": "", "Data": { "Id": 2, "StudentId": "1253024", "StudentPassword": "", "Password": "", "Phone": "13761463756", "Photo": "gggg", "Nickname": "大潘", "RealName": "潘瑞峰", "Sex": "F", "Birth": "1993-10-22T00:00:00+08:00", "Email": "123@QQ.COM", "School": "同济大学", "SchoolPart": "嘉定校区", "College": "软件学院", "Dormitory": "16号楼", "Specialty": "软件工程", "Education": "硕士", "SchoolYear": "2016", "Identity": "学生", "Hobby": "无", "IsSingle": "Y", "AncestralHome": "上海", "Lvl": 0, "Exp": 0, "UserType": 1 }, "PageSize": 0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }
+// @Failure error { "Status": 1, "Error": "权限错误", "Data": "用户未登录", "PageSize": 0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }
 // @router /update [post]
 func (c *UserController) Update() {
 	userId, _ := c.Ctx.Input.GetData("userId").(int)
@@ -178,9 +179,6 @@ func (c *UserController) Update() {
 			}
 			if user.Email != "" {
 				userInDB.Email = user.Email
-			}
-			if user.School != "" {
-				userInDB.School = user.School
 			}
 			if user.SchoolPart != "" {
 				userInDB.SchoolPart = user.SchoolPart

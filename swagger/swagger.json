@@ -190,6 +190,34 @@
                 }
             }
         },
+        "/user/details": {
+            "get": {
+                "tags": [
+                    "user"
+                ],
+                "description": "Get User Details",
+                "operationId": "UserController.Get User Details",
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "token",
+                        "description": "user token",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.String"
+                        }
+                    }
+                ],
+                "responses": {
+                    "error": {
+                        "description": "{ \"Status\": 1, \"Error\": \"权限错误\", \"Data\": \"用户未登录\", \"PageSize\": 0, \"PageIndex\": 0, \"TotalPage\": 0, \"TotalCount\": 0 }"
+                    },
+                    "success": {
+                        "description": "{ \"Status\": 0, \"Error\": \"\", \"Data\": { \"Id\": 2, \"StudentId\": \"1253024\", \"StudentPassword\": \"\", \"Password\": \"\", \"Phone\": \"13761463756\", \"Photo\": \"\", \"Nickname\": \"\", \"RealName\": \"\", \"Sex\": \"\", \"Birth\": \"0001-01-01T00:00:00Z\", \"Email\": \"\", \"School\": \"同济大学\", \"SchoolPart\": \"\", \"College\": \"\", \"Dormitory\": \"\", \"Specialty\": \"\", \"Education\": \"\", \"SchoolYear\": \"\", \"Identity\": \"\", \"Hobby\": \"\", \"IsSingle\": \"\", \"AncestralHome\": \"\", \"Lvl\": 0, \"Exp\": 0, \"UserType\": 1 }, \"PageSize\": 0, \"PageIndex\": 0, \"TotalPage\": 0, \"TotalCount\": 0 }"
+                    }
+                }
+            }
+        },
         "/user/login": {
             "post": {
                 "tags": [
@@ -222,9 +250,142 @@
                     }
                 }
             }
+        },
+        "/user/update": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "description": "update user",
+                "operationId": "UserController.update user",
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "token",
+                        "description": "user token",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/.String"
+                        }
+                    },
+                    {
+                        "in": "body",
+                        "name": "Photo",
+                        "description": "Photo",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Nickname",
+                        "description": "Nickname",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Password",
+                        "description": "Password",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "RealName",
+                        "description": "RealName",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Sex",
+                        "description": "Sex",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Birth",
+                        "description": "Birth",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Email",
+                        "description": "Email",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "SchoolPart",
+                        "description": "SchoolPart",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "College",
+                        "description": "College",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Specialty",
+                        "description": "Specialty",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Dormitory",
+                        "description": "Dormitory",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Education",
+                        "description": "Education",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "SchoolYear",
+                        "description": "SchoolYear",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Identity",
+                        "description": "Identity",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "Hobby",
+                        "description": "Hobby",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "IsSingle",
+                        "description": "IsSingle",
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "AncestralHome",
+                        "description": "AncestralHome",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "error": {
+                        "description": "{ \"Status\": 1, \"Error\": \"权限错误\", \"Data\": \"用户未登录\", \"PageSize\": 0, \"PageIndex\": 0, \"TotalPage\": 0, \"TotalCount\": 0 }"
+                    },
+                    "success": {
+                        "description": "{ \"Status\": 0, \"Error\": \"\", \"Data\": { \"Id\": 2, \"StudentId\": \"1253024\", \"StudentPassword\": \"\", \"Password\": \"\", \"Phone\": \"13761463756\", \"Photo\": \"gggg\", \"Nickname\": \"大潘\", \"RealName\": \"潘瑞峰\", \"Sex\": \"F\", \"Birth\": \"1993-10-22T00:00:00+08:00\", \"Email\": \"123@QQ.COM\", \"School\": \"同济大学\", \"SchoolPart\": \"嘉定校区\", \"College\": \"软件学院\", \"Dormitory\": \"16号楼\", \"Specialty\": \"软件工程\", \"Education\": \"硕士\", \"SchoolYear\": \"2016\", \"Identity\": \"学生\", \"Hobby\": \"无\", \"IsSingle\": \"Y\", \"AncestralHome\": \"上海\", \"Lvl\": 0, \"Exp\": 0, \"UserType\": 1 }, \"PageSize\": 0, \"PageIndex\": 0, \"TotalPage\": 0, \"TotalCount\": 0 }"
+                    }
+                }
+            }
         }
     },
     "definitions": {
+        ".String": {
+            "type": "object"
+        },
         "models.Token": {
             "title": "Token",
             "type": "object",
