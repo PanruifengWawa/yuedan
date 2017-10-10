@@ -49,8 +49,24 @@ func init() {
 
 	beego.GlobalControllerRouter["yuedan/controllers:UserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:UserController"],
 		beego.ControllerComments{
+			Method: "GetUserDetails",
+			Router: `/details`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["yuedan/controllers:UserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:UserController"],
+		beego.ControllerComments{
 			Method: "Login",
 			Router: `/login`,
+			AllowHTTPMethods: []string{"post"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["yuedan/controllers:UserController"] = append(beego.GlobalControllerRouter["yuedan/controllers:UserController"],
+		beego.ControllerComments{
+			Method: "Update",
+			Router: `/update`,
 			AllowHTTPMethods: []string{"post"},
 			MethodParams: param.Make(),
 			Params: nil})

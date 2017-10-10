@@ -1,5 +1,5 @@
 language: go
-script: go get github.com/astaxie/beego && go install  github.com/astaxie/beego && go test
+script: go get github.com/astaxie/beego && go install  github.com/astaxie/beego &&  go get github.com/satori/go.uuid && go test
 go_import_path: yuedan
 go:
   - 1.8

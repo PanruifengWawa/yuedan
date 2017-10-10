@@ -17,7 +17,7 @@ func UserFilter(ctx *context.Context) {
 		return
 	}
 
-	token, err := models.GetTTokenByTokenStr(tokenStr)
+	token, err := models.GetTokenByTokenStr(tokenStr)
 	if err != nil {
 		ctx.Output.JSON(utils.GenerateDataWrapper(enums.AuthError, "用户未登录"), true, true)
 		return
