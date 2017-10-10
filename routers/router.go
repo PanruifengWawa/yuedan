@@ -33,14 +33,14 @@ func init() {
 				&controllers.UserController{},
 			),
 		),
-
-		beego.NSNamespace("/token",
+		beego.NSNamespace("/order",
 			beego.NSInclude(
-				&controllers.TokenController{},
+				&controllers.OrderController{},
 			),
 		),
 	)
 	beego.InsertFilter("/v1/user/update", beego.BeforeExec, filters.UserFilter)
 	beego.InsertFilter("/v1/user/details", beego.BeforeExec, filters.UserFilter)
+	beego.InsertFilter("/v1/order/*", beego.BeforeExec, filters.UserFilter)
 	beego.AddNamespace(ns)
 }

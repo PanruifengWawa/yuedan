@@ -7,7 +7,7 @@ import (
 
 func init() {
 
-	beego.GlobalControllerRouter["yuedan/controllers:TokenController"] = append(beego.GlobalControllerRouter["yuedan/controllers:TokenController"],
+	beego.GlobalControllerRouter["yuedan/controllers:OrderController"] = append(beego.GlobalControllerRouter["yuedan/controllers:OrderController"],
 		beego.ControllerComments{
 			Method: "Post",
 			Router: `/`,
@@ -15,15 +15,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["yuedan/controllers:TokenController"] = append(beego.GlobalControllerRouter["yuedan/controllers:TokenController"],
-		beego.ControllerComments{
-			Method: "GetAll",
-			Router: `/`,
-			AllowHTTPMethods: []string{"get"},
-			MethodParams: param.Make(),
-			Params: nil})
-
-	beego.GlobalControllerRouter["yuedan/controllers:TokenController"] = append(beego.GlobalControllerRouter["yuedan/controllers:TokenController"],
+	beego.GlobalControllerRouter["yuedan/controllers:OrderController"] = append(beego.GlobalControllerRouter["yuedan/controllers:OrderController"],
 		beego.ControllerComments{
 			Method: "GetOne",
 			Router: `/:id`,
@@ -31,11 +23,19 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["yuedan/controllers:TokenController"] = append(beego.GlobalControllerRouter["yuedan/controllers:TokenController"],
+	beego.GlobalControllerRouter["yuedan/controllers:OrderController"] = append(beego.GlobalControllerRouter["yuedan/controllers:OrderController"],
 		beego.ControllerComments{
 			Method: "Delete",
 			Router: `/:id`,
 			AllowHTTPMethods: []string{"delete"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["yuedan/controllers:OrderController"] = append(beego.GlobalControllerRouter["yuedan/controllers:OrderController"],
+		beego.ControllerComments{
+			Method: "GetOnesOrder",
+			Router: `/myList`,
+			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
 

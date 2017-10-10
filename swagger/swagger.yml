@@ -7,94 +7,156 @@ info:
     email: 46937922@qq.com
 basePath: /v1
 paths:
-  /token/:
-    get:
-      tags:
-      - token
-      description: get Token
-      operationId: TokenController.Get All
-      parameters:
-      - in: query
-        name: query
-        description: Filter. e.g. col1:v1,col2:v2 ...
-        type: string
-      - in: query
-        name: fields
-        description: Fields returned. e.g. col1,col2 ...
-        type: string
-      - in: query
-        name: sortby
-        description: Sorted-by fields. e.g. col1,col2 ...
-        type: string
-      - in: query
-        name: order
-        description: Order corresponding to each sortby field, if single value, apply
-          to all sortby fields. e.g. desc,asc ...
-        type: string
-      - in: query
-        name: limit
-        description: Limit the size of result set. Must be an integer
-        type: string
-      - in: query
-        name: offset
-        description: Start position of result set. Must be an integer
-        type: string
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/models.Token'
-        "403": {}
+  /order/:
     post:
       tags:
-      - token
-      description: create Token
-      operationId: TokenController.Post
+      - order
+      description: 发布约单
+      operationId: OrderController.Post
       parameters:
-      - in: body
-        name: body
-        description: body for Token content
+      - in: header
+        name: token
+        description: user token
         required: true
         schema:
-          $ref: '#/definitions/models.Token'
+          $ref: '#/definitions/.String'
+      - in: body
+        name: title
+        description: title
+        required: true
+        type: string
+      - in: body
+        name: type
+        description: type
+        required: true
+        type: string
+      - in: body
+        name: date
+        description: date 2017-10-20 10:20:00
+        required: true
+        type: string
+      - in: body
+        name: place
+        description: place
+        required: true
+        type: string
+      - in: body
+        name: pay
+        description: pay
+        required: true
+        type: string
+      - in: body
+        name: content
+        description: content
+        required: true
+        type: string
+      - in: body
+        name: number
+        description: number
+        required: true
+        type: string
+      - in: body
+        name: sex
+        description: sex
+        required: true
+        type: string
       responses:
-        "201":
-          description: '{int} models.Token'
-        "403":
-          description: body is empty
-  /token/{id}:
+        error:
+          description: '{ "Status": 1, "Error": "权限错误", "Data": "用户未登录", "PageSize":
+            0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }'
+        success:
+          description: '{ "Status": 0, "Error": "", "Data": "成功", "PageSize": 0, "PageIndex":
+            0, "TotalPage": 0, "TotalCount": 0 }'
+  /order/{id}:
     get:
       tags:
-      - token
-      description: get Token by id
-      operationId: TokenController.Get One
+      - order
+      description: 根据id获取约单
+      operationId: OrderController.Get One
       parameters:
+      - in: header
+        name: token
+        description: user token
+        required: true
+        schema:
+          $ref: '#/definitions/.String'
       - in: path
         name: id
         description: The key for staticblock
         required: true
         type: string
       responses:
-        "200":
-          schema:
-            $ref: '#/definitions/models.Token'
-        "403":
-          description: :id is empty
+        error:
+          description: '{ "Status": 1, "Error": "权限错误", "Data": "用户未登录", "PageSize":
+            0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }'
+        success:
+          description: '{ "Status": 0, "Error": "", "Data": { "Id": 1, "Title": "title",
+            "Type": "type", "Date": "2017-10-20T10:20:00+08:00", "ReleaseDate": "2017-10-10T20:05:13+08:00",
+            "Place": "place", "Pay": "pay", "Content": "content", "UserId": { "Id":
+            2, "StudentId": "", "StudentPassword": "", "Password": "", "Phone": "",
+            "Photo": "", "Nickname": "大潘", "RealName": "", "Sex": "", "Birth": "0001-01-01T00:00:00Z",
+            "Email": "", "School": "", "SchoolPart": "", "College": "", "Dormitory":
+            "", "Specialty": "", "Education": "", "SchoolYear": "", "Identity": "",
+            "Hobby": "", "IsSingle": "", "AncestralHome": "", "Lvl": 0, "Exp": 0,
+            "UserType": 0 }, "Number": 3, "Sex": "F" }, "PageSize": 0, "PageIndex":
+            0, "TotalPage": 0, "TotalCount": 0 }'
     delete:
       tags:
-      - token
-      description: delete the Token
-      operationId: TokenController.Delete
+      - order
+      description: 删除约单
+      operationId: OrderController.Delete
       parameters:
+      - in: header
+        name: token
+        description: user token
+        required: true
+        schema:
+          $ref: '#/definitions/.String'
       - in: path
         name: id
         description: The id you want to delete
         required: true
         type: string
       responses:
-        "200":
-          description: '{string} delete success!'
-        "403":
-          description: id is empty
+        error:
+          description: '{ "Status": 1, "Error": "权限错误", "Data": "用户未登录", "PageSize":
+            0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }'
+        success:
+          description: '{ "Status": 0, "Error": "", "Data": "成功", "PageSize": 0, "PageIndex":
+            0, "TotalPage": 0, "TotalCount": 0 }'
+  /order/myList:
+    get:
+      tags:
+      - order
+      description: 获取某人发布的约单列表
+      operationId: OrderController.Get One's Order List
+      parameters:
+      - in: header
+        name: token
+        description: user token
+        required: true
+        schema:
+          $ref: '#/definitions/.String'
+      - in: body
+        name: PageIndex
+        description: PageIndex  1~
+        required: true
+        type: string
+      - in: body
+        name: PageSize
+        description: PageSize 1~10
+        required: true
+        type: string
+      responses:
+        error:
+          description: '{ "Status": 1, "Error": "权限错误", "Data": "用户未登录", "PageSize":
+            0, "PageIndex": 0, "TotalPage": 0, "TotalCount": 0 }'
+        success:
+          description: '{ "Status": 0, "Error": "", "Data": [ { "Content": "content",
+            "Date": "2017-10-30T10:20:00+08:00", "Id": 5, "NickName": "", "Number":
+            3, "Pay": "pay", "Place": "place", "ReleaseDate": "2017-10-10T22:03:51+08:00",
+            "Sex": "F", "Title": "title4", "Type": "type", "UserId": 3 } ], "PageSize":
+            10, "PageIndex": 1, "TotalPage": 1, "TotalCount": 3 }'
   /user/:
     post:
       tags:
@@ -276,86 +338,10 @@ paths:
 definitions:
   .String:
     type: object
-  models.Token:
-    title: Token
-    type: object
-    properties:
-      Id:
-        type: integer
-        format: int64
-      LoginDate:
-        type: string
-        format: string
-      TokenStr:
-        type: string
-      UserId:
-        $ref: '#/definitions/models.User'
-      UserType:
-        type: integer
-        format: int32
-  models.User:
-    title: User
-    type: object
-    properties:
-      AncestralHome:
-        type: string
-      Birth:
-        type: string
-        format: string
-      College:
-        type: string
-      Dormitory:
-        type: string
-      Education:
-        type: string
-      Email:
-        type: string
-      Exp:
-        type: integer
-        format: int64
-      Hobby:
-        type: string
-      Id:
-        type: integer
-        format: int64
-      Identity:
-        type: string
-      IsSingle:
-        type: string
-      Lvl:
-        type: integer
-        format: int64
-      Nickname:
-        type: string
-      Password:
-        type: string
-      Phone:
-        type: string
-      Photo:
-        type: string
-      RealName:
-        type: string
-      School:
-        type: string
-      SchoolPart:
-        type: string
-      SchoolYear:
-        type: string
-      Sex:
-        type: string
-      Specialty:
-        type: string
-      StudentId:
-        type: string
-      StudentPassword:
-        type: string
-      UserType:
-        type: integer
-        format: int32
 tags:
 - name: user
   description: |
     UserController operations for User
-- name: token
+- name: order
   description: |
-    TokenController operations for Token
+    OrderController operations for Order

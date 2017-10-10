@@ -41,3 +41,21 @@ create table token(
 	foreign key(user_id) references user(id) on delete cascade
 )engine=innodb default charset=utf8;
 
+
+drop table if exists `order`;
+create table `order`(
+	id serial primary key,
+	title varchar(256) not null,
+	type varchar(64) not null,
+	date datetime not null,
+	release_date datetime not null,
+	place varchar(128) not null,
+	pay varchar(64) not null,
+	content text not null,
+    user_id bigint(20) unsigned not null,
+	number int not null,
+	sex char(1) not null,
+	foreign key(user_id) references user(id) on delete cascade
+)engine=innodb default charset=utf8;
+
+

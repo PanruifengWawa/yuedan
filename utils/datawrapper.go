@@ -8,13 +8,13 @@ type DataWrapper struct {
 	Status     int
 	Error      enums.Errors
 	Data       interface{}
-	PageSize   int
-	PageIndex  int
-	TotalPage  int
-	TotalCount int
+	PageSize   int64
+	PageIndex  int64
+	TotalPage  int64
+	TotalCount int64
 }
 
-func GetTotalPage(totalCount int, pageSize int) int {
+func GetTotalPage(totalCount int64, pageSize int64) int64 {
 	if totalCount%pageSize == 0 {
 		return totalCount / pageSize
 	} else {
@@ -28,10 +28,11 @@ func GenerateDataWrapper(errorMessage enums.Errors, data interface{}) DataWrappe
 	}
 	return DataWrapper{Status: status, Error: errorMessage, Data: data}
 }
-func GenerateDataWrapperWithPage(errorMessage enums.Errors, data interface{}, pageSize int, pageIndex int, totalPage int, totalCount int) DataWrapper {
+func GenerateDataWrapperWithPage(errorMessage enums.Errors, data interface{}, pageSize int64, pageIndex int64, totalCount int64) DataWrapper {
 	var status int
 	if errorMessage != "" {
 		status = 1
 	}
+	totalPage := GetTotalPage(totalCount, pageSize)
 	return DataWrapper{Status: status, Error: errorMessage, Data: data, PageSize: pageSize, PageIndex: pageIndex, TotalPage: totalPage, TotalCount: totalCount}
 }
